@@ -1,0 +1,8 @@
+{
+    "host": "rm-rj996qh3954ml72r7ho.mysql.rds.aliyuncs.com",
+    "port": 3306,
+    "user": "spider_user",
+    "password": "Scripter20",
+    "dbname": "spider",
+    "charset": "utf-8"
+}

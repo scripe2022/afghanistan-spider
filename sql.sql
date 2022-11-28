@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS posts;
+CREATE TABLE IF NOT EXISTS `posts`(
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `data` JSON,
+    PRIMARY KEY (id)
+);

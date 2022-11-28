@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+# import pymysql
 from sqlalchemy import create_engine, Table, Column, MetaData
 from sqlalchemy.types import INT, JSON
 import json
@@ -24,12 +25,15 @@ def init_db():
     return engine
 
 
-def main(html_doc):
+def main(url):
+    x = requests.get(url)
+    html_doc = x.text
     data = {}
     soup = BeautifulSoup(html_doc, 'lxml')
     data['title'] = soup.title.string
     data['datetime'] = soup.time.string
     data['type'] = "whitehouse.gov"
+    data['url'] = url
     dom = soup.select('section[class="body-content"] > div[class="container"] > div[class="row"]')
     content_list = dom[0].find_all("p", attrs={'class': None})
     for i in range(len(content_list)):
@@ -52,8 +56,8 @@ def write_db(engine, data):
 
 engine = init_db()
 for i in range(len(link_list)):
-    x = requests.get(link_list[i])
-    data = main(x.text)
+    print((i+1), '/', len(link_list))
+    data = main(link_list[i])
     write_db(engine, data)
 
 # f_html = open("demo.html", encoding = "utf-8")

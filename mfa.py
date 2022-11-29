@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from sqlalchemy import create_engine, Table, Column, MetaData
-from sqlalchemy.types import INT, JSON
+from sqlalchemy.types import INT, JSON, VARCHAR
 import json
 
 link_list = []

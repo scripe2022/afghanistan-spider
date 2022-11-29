@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 # import pymysql
 from sqlalchemy import create_engine, Table, Column, MetaData
-from sqlalchemy.types import INT, JSON
+from sqlalchemy.types import INT, JSON, VARCHAR
 import json
 
 link_list = [
@@ -26,14 +26,15 @@ def init_db():
 
 
 def main(url):
+    data = {}
     x = requests.get(url)
     html_doc = x.text
-    data = {}
     soup = BeautifulSoup(html_doc, 'lxml')
     data['title'] = soup.title.string
     data['datetime'] = soup.time.string
     data['type'] = "whitehouse.gov"
     data['url'] = url
+    data['source'] = ''
     dom = soup.select('section[class="body-content"] > div[class="container"] > div[class="row"]')
     content_list = dom[0].find_all("p", attrs={'class': None})
     for i in range(len(content_list)):
@@ -45,9 +46,20 @@ def write_db(engine, data):
     metadata = MetaData()
     data_table = Table('posts', metadata,
         Column('id', INT, primary_key=True),
-        Column('data', JSON)
+        Column('url', VARCHAR),
+        Column('datetime', VARCHAR),
+        Column('title', VARCHAR),
+        Column('type', VARCHAR),
+        Column('content', JSON)
     )
-    json_object = {"data": data}
+    json_object = {
+        "url": data['url'],
+        "datetime": data['datetime'],
+        "title": data['title'],
+        "type": data['type'],
+        "source": data['source'],
+        "content": data['content'],
+    }
     with engine.connect() as conn:
         conn.execute(
             data_table.insert(),
@@ -60,9 +72,6 @@ for i in range(len(link_list)):
     data = main(link_list[i])
     write_db(engine, data)
 
-# f_html = open("demo.html", encoding = "utf-8")
-# html_doc = f_html.read()
-# data = main(html_doc)
 
 # engine = init_db()
 # write_db(engine, data)

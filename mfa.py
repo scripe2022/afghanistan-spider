@@ -33,6 +33,7 @@ def main_mfa(url):
     data['title'] = soup.select('div[class="news-details"] > div[class="news-title"] > h1')[0].getText()
     data['datetime'] = soup.select('p[class="time"] > span')[0].getText()
     data['url'] = url
+    data['source'] = ''
     dom = soup.select('div[class="news-details"] > div[class="news-main"] > p')
     content_list = []
     for i in dom:
@@ -66,9 +67,20 @@ def write_db(engine, data):
     metadata = MetaData()
     data_table = Table('posts', metadata,
         Column('id', INT, primary_key=True),
-        Column('data', JSON)
+        Column('url', VARCHAR),
+        Column('datetime', VARCHAR),
+        Column('title', VARCHAR),
+        Column('type', VARCHAR),
+        Column('content', JSON)
     )
-    json_object = {"data": data}
+    json_object = {
+        "url": data['url'],
+        "datetime": data['datetime'],
+        "title": data['title'],
+        "type": data['type'],
+        "source": data['source'],
+        "content": data['content'],
+    }
     with engine.connect() as conn:
         conn.execute(
             data_table.insert(),

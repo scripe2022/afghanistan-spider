@@ -34,6 +34,7 @@ def main_mfa(url):
     data['datetime'] = soup.select('p[class="time"] > span')[0].getText()
     data['url'] = url
     data['source'] = ''
+    data['titletrans'] = ''
     dom = soup.select('div[class="news-details"] > div[class="news-main"] > p')
     content_list = []
     for i in dom:
@@ -51,6 +52,7 @@ def main_fmprc(url):
     soup = BeautifulSoup(html_doc, 'lxml')
     data['type'] = 'fmprc.gov.cn'
     data['title'] = soup.select('div[class="vibox"] > div[class="title"]')[0].getText()
+    data['titletrans'] = ''
     data['source'] = soup.select('div[class="time"] > span[id="News_Body_source"] > span[id="myDocsource2"]')[0].getText()
     data['datetime'] = soup.select('div[class="time"] > span[id="News_Body_Time"]')[0].getText()
     data['url'] = url
@@ -70,6 +72,7 @@ def write_db(engine, data):
         Column('url', VARCHAR),
         Column('datetime', VARCHAR),
         Column('title', VARCHAR),
+        Column('titletrans', VARCHAR),
         Column('type', VARCHAR),
         Column('content', JSON)
     )
@@ -77,6 +80,7 @@ def write_db(engine, data):
         "url": data['url'],
         "datetime": data['datetime'],
         "title": data['title'],
+        "titletrans": data["titletrans"],
         "type": data['type'],
         "source": data['source'],
         "content": data['content'],

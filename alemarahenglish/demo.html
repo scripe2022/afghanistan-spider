@@ -1,0 +1,929 @@
+<html lang="en-US" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths js_active  vc_desktop  vc_transform  vc_transform "><head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+<!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.alemarahenglish.af/xmlrpc.php">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="https://www.alemarahenglish.af/wp-content/themes/multinews/css/print.css" media="print">
+<link rel="apple-touch-icon" href="https://www.alemarahenglish.af/wp-content/themes/multinews/apple-touch-icon-precomposed.png">
+<title>Foreign minister meets Pakistani delegation – Islamic Emirate of Afghanistan</title><link rel="stylesheet" href="https://www.alemarahenglish.af/wp-content/cache/min/1/7f757fc89ccd819ee78273d9ebfa0af4.css" media="all" data-minify="1">
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//alemarahenglish.af">
+<link rel="alternate" type="application/rss+xml" title="Islamic Emirate of Afghanistan » Feed" href="https://www.alemarahenglish.af/feed/">
+<link rel="alternate" type="application/rss+xml" title="Islamic Emirate of Afghanistan » Comments Feed" href="https://www.alemarahenglish.af/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Islamic Emirate of Afghanistan » Foreign minister meets Pakistani delegation Comments Feed" href="https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.alemarahenglish.af\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+</style>
+<style id="rocket-lazyload-inline-css" type="text/css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://www.alemarahenglish.af/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<script type="text/javascript" src="https://www.alemarahenglish.af/wp-includes/js/jquery/jquery.min.js?ver=3.6.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.alemarahenglish.af/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script data-minify="1" type="text/javascript" src="https://www.alemarahenglish.af/wp-content/cache/min/1/wp-content/plugins/Elite-video-player/js/embed.js?ver=1662831057" id="elite_embed-js"></script>
+<script type="text/javascript" src="https://www.alemarahenglish.af/wp-content/plugins/Elite-video-player/js/jquery.mCustomScrollbar.min.js?ver=2.3.2" id="elite_jquery.mCustomScrollbar-js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.11/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="https://www.alemarahenglish.af/wp-content/plugins/Elite-video-player/js/froogaloop.min.js?ver=2.3.2" id="elite_Froogaloop2-js"></script>
+<script type="text/javascript" src="https://www.alemarahenglish.af/wp-content/plugins/Elite-video-player/js/THREEx.FullScreen.min.js?ver=2.3.2" id="elite_THREEx.FullScreen-js"></script>
+<script type="text/javascript" src="https://www.alemarahenglish.af/wp-content/plugins/Elite-video-player/js/Playlist.min.js?ver=2.3.2" id="elite_playlist-js"></script>
+<script type="text/javascript" src="https://www.alemarahenglish.af/wp-content/plugins/Elite-video-player/js/videoPlayer.min.js?ver=2.3.2" id="elite_video_player-js"></script>
+<script type="text/javascript" src="https://www.alemarahenglish.af/wp-content/plugins/Elite-video-player/js/ZeroClipboard.min.js?ver=2.3.2" id="elite_ZeroClipboard-js"></script>
+<script type="text/javascript" src="https://www.alemarahenglish.af/wp-content/plugins/Elite-video-player/js/iphone-inline-video.min.js?ver=2.3.2" id="elite_inlineVideo-js"></script>
+<link rel="https://api.w.org/" href="https://www.alemarahenglish.af/wp-json/"><link rel="alternate" type="application/json" href="https://www.alemarahenglish.af/wp-json/wp/v2/posts/53866"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.alemarahenglish.af/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.alemarahenglish.af/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+<link rel="canonical" href="https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/">
+<link rel="shortlink" href="https://www.alemarahenglish.af/?p=53866">
+<link rel="alternate" type="application/json+oembed" href="https://www.alemarahenglish.af/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.alemarahenglish.af%2Fforeign-minister-meets-pakistani-delegation%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.alemarahenglish.af/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.alemarahenglish.af%2Fforeign-minister-meets-pakistani-delegation%2F&amp;format=xml">
+<!--[if lt IE 9]>
+	<script src="https://www.alemarahenglish.af/wp-content/themes/multinews/framework/helpers/js/html5.js"></script>
+	<script src="https://www.alemarahenglish.af/wp-content/themes/multinews/framework/helpers/js/IE9.js"></script>
+	<![endif]-->
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<link rel="icon" href="https://www.alemarahenglish.af/wp-content/uploads/2020/04/cropped-cropped-talib_figher_weapon-620x330-1-36x36.jpg" sizes="32x32">
+<link rel="icon" href="https://www.alemarahenglish.af/wp-content/uploads/2020/04/cropped-cropped-talib_figher_weapon-620x330-1-300x300.jpg" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.alemarahenglish.af/wp-content/uploads/2020/04/cropped-cropped-talib_figher_weapon-620x330-1-300x300.jpg">
+<meta name="msapplication-TileImage" content="https://www.alemarahenglish.af/wp-content/uploads/2020/04/cropped-cropped-talib_figher_weapon-620x330-1-300x300.jpg">
+<style type="text/css" title="dynamic-css" class="options-output">body{color:#a5a5a5;}.top-bar, ul.top-menu li ul li:hover, .ajax-search-results a:hover{background:#1e73be;}.top-bar{border-color:#1e73be;}ul.top-menu li a,.mobile-menu li a,.ajax-search-results a h2{color:#ffffff;}ul.top-social-icon li a{color:#ffffff;}.today_date{background:#dd9933;}.header-wrap,.hst1 .header-wrap,.hst2 .header-wrap,.hst3 .header-wrap{background-size:inherit;background-image:url('http://shahamat1.net/wp-content/uploads/2019/12/Header-BG.jpg');}.navigation, .hst1 .navigation, .hst2 .navigation, .hst3 .navigation, .fixed-header{background:#1e73be;}ul.main-menu li a,.device-menu-holder,.the_menu_holder_area i,.device-menu-holder .mh-icon,#navigation .device-menu li.menu-item > a,.hst1 ul.main-menu li a,.hst2 ul.main-menu li a,.hst1 .breaking-news .breaking-title, .hst1 ul.main-menu li a, .hst2 .breaking-news .breaking-title, .hst2 ul.main-menu li a, .hst3 .breaking-news .breaking-title, .hst3 ul.main-menu li a{color:#1e73be;}ul.main-menu li a:hover,.device-menu-holder:hover,.the_menu_holder_area i:hover,.device-menu-holder .mh-icon:hover,#navigation .device-menu li.menu-item > a:hover,.hst1 ul.main-menu li a:hover,.hst2 ul.main-menu li a:hover,.hst1 .breaking-news .breaking-title, .hst1 ul.main-menu li a, .hst2 .breaking-news .breaking-title, .hst2 ul.main-menu li a, .hst3 .breaking-news .breaking-title, .hst3 ul.main-menu li a:hover{color:#ffffff;}ul.main-menu li, ul.main-menu li:first-child, .device-menu-holder, #navigation .device-menu, #navigation .device-menu li.menu-item, #navigation .device-menu li .responsive-caret, .hst1 ul.main-menu li, .hst1 ul.main-menu li:first-child, .hst2 ul.main-menu li, .hst2 ul.main-menu li:first-child, .hst2 ul.br-right li, .hst3 ul.main-menu li, .hst3 ul.main-menu li:first-child, .hst1 ul.main-menu li:not(.mom_mega) ul li, .hst2 ul.main-menu li:not(.mom_mega) ul li, .hst3 ul.main-menu li:not(.mom_mega) ul li{border-color:#ffffff;}ul.main-menu li.current-menu-parent, ul.main-menu li.current-menu-item, ul.main-menu li:hover, .device-menu-holder, #navigation .device-menu li.menu-item:hover, .hst1 ul.main-menu li:hover, .hst2 ul.main-menu li:hover, .hst3 ul.main-menu li:hover, .hst1 ul.main-menu li.current-menu-parent, .hst1 ul.main-menu li.current-menu-item, .hst1 .device-menu-holder, .hst1 #navigation .device-menu li.menu-item:hover, .hst2 ul.main-menu li.current-menu-parent, .hst2 ul.main-menu li.current-menu-item, .hst2 .device-menu-holder, .hst2 #navigation .device-menu li.menu-item:hover, .hst3 ul.main-menu li.current-menu-parent, .hst3 ul.main-menu li.current-menu-item, .hst3 .device-menu-holder, .hst3 #navigation .device-menu li.menu-item:hover{background:#278be3;}.navigation ul.main-menu > li:not(.mom_mega) ul.sub-menu, .navigation ul.main-menu > li .mom-megamenu, .navigation ul.main-menu > li.mom_mega.menu-item-depth-0 > .mom_mega_wrap, ul.main-menu li.mom_mega ul li ul li:hover, .hst1 .navigation ul.main-menu > li:not(.mom_mega) ul.sub-menu, .hst2 .navigation ul.main-menu > li:not(.mom_mega) ul.sub-menu, .hst3 .navigation ul.main-menu > li:not(.mom_mega) ul.sub-menu, .hst1 .navigation ul.main-menu > li .mom-megamenu, .hst2 .navigation ul.main-menu > li .mom-megamenu, .hst3 .navigation ul.main-menu > li .mom-megamenu, .hst1 .navigation ul.main-menu > li.mom_mega.menu-item-depth-0 > .mom_mega_wrap, .hst2 .navigation ul.main-menu > li.mom_mega.menu-item-depth-0 > .mom_mega_wrap, .hst3 .navigation ul.main-menu > li.mom_mega.menu-item-depth-0 > .mom_mega_wrap, .hst1 ul.main-menu > li ul.sub-menu, .hst2 ul.main-menu > li ul.sub-menu, .hst3 ul.main-menu > li ul.sub-menu, .hst1 .navigation ul.main-menu > li:not(.mom_mega) ul.sub-menu, .hst2 .navigation ul.main-menu > li:not(.mom_mega) ul.sub-menu, .hst3 .navigation ul.main-menu > li:not(.mom_mega) ul.sub-menu{background:#1e73be;}.navigation ul.main-menu > li:not(.mom_mega) ul.sub-menu, ul.main-menu li:not(.mom_mega) ul li, .navigation ul.main-menu > li .mom-megamenu, .navigation .mom-megamenu .sub-mom-megamenu ul li, .navigation ul.main-menu > li.mom_mega.menu-item-depth-0 > .mom_mega_wrap, .main-menu .mom_mega.menu-item-depth-0 > ul.sub-menu > li > a, .navigation .mom-megamenu ul li:last-child, .navigation .mom-megamenu .sub-mom-megamenu2 ul, .navigation .mom-megamenu .sub-mom-megamenu ul, .navigation .mom-megamenu .view-all-link, .hst1 ul.main-menu > li ul.sub-menu, .hst2 ul.main-menu > li ul.sub-menu, .hst3 ul.main-menu > li ul.sub-menu, .hst1 .navigation ul.main-menu > li:not(.mom_mega) ul.sub-menu, .hst2 .navigation ul.main-menu > li:not(.mom_mega) ul.sub-menu, .hst3 .navigation ul.main-menu > li:not(.mom_mega) ul.sub-menu, .hst1 .navigation ul.main-menu > li .mom-megamenu, .hst2 .navigation ul.main-menu > li .mom-megamenu, .hst3 .navigation ul.main-menu > li .mom-megamenu, .hst1 .navigation ul.main-menu > li.mom_mega.menu-item-depth-0 > .mom_mega_wrap, .hst2 .navigation ul.main-menu > li.mom_mega.menu-item-depth-0 > .mom_mega_wrap, .hst3 .navigation ul.main-menu > li.mom_mega.menu-item-depth-0 > .mom_mega_wrap{border-color:#000000;}ul.main-menu li ul li:hover, .navigation .mom-megamenu ul li.active, .navigation .mom-megamenu ul li:hover, .hst1 .navigation .mom-megamenu ul li.active, .hst1 .navigation .mom-megamenu ul li:hover, .hst2 .navigation .mom-megamenu ul li.active, .hst2 .navigation .mom-megamenu ul li:hover, .hst3 .navigation .mom-megamenu ul li.active, .hst3 .navigation .mom-megamenu ul li:hover, .hst1 ul.main-menu li:not(.mom_mega) ul li:hover, .hst2 ul.main-menu li:not(.mom_mega) ul li:hover, .hst3 ul.main-menu li:not(.mom_mega) ul li:hover, .hst1 ul.main-menu li.mom_mega ul li:not(.mega_col_title):hover, .hst2 ul.main-menu li.mom_mega ul li:not(.mega_col_title):hover, .hst3 ul.main-menu li.mom_mega ul li:not(.mega_col_title):hover{background:#328ad8;}.mom-body .breaking-news .breaking-title{background:#df3e1c;}.mom-body .breaking-news .breaking-title{color:#ffffff;}.mom-body ul.br-right li a{color:#1e73be;}header.block-title, .f-tabbed-head, .section-header, ol.nb-tabbed-head li:hover, ul.f-tabbed-sort li:hover, .secondary-sidebar .widget-title h4, .sidebar .widget-title h4, .secondary-sidebar .widget-title h2, .sidebar .widget-title h2{background:#1e73be;}section header.block-title h2 a, section header.block-title h2, .f-tabbed-head li a, .section-header h1.section-title2 a, .section-header h1.section-title2, .section-header span.mom-sub-title, ol.nb-tabbed-head li a, .secondary-sidebar .widget-title h4, .sidebar .widget-title h4, .secondary-sidebar .widget-title h2, .sidebar .widget-title h2{color:#ffffff;}footer.footer{border-top:0px solid ;border-bottom:0px solid ;border-left:0px solid ;border-right:0px solid ;}footer.footer .footer-widget, footer.footer .footer-widget:first-child{border-color:transparent;}.footer-bottom{color:#ffffff;}ul.footer-bottom-menu{border-top:0px solid ;border-bottom:0px solid ;border-left:0px solid ;border-right:0px solid ;}ul.top-menu li,ul.top-social-icon li.top-search div input, ul.main-menu li, .breaking-news .breaking-title,.section-header, footer.show-more a, .def-slider-desc, .f-tabbed-head li a,.scroller ul li .entry-meta, .secondary-sidebar .post-list li .read-more-link,.widget-tab .post-list li .entry-meta, .tagcloud a, .sidebar .social-counter,ul.widget-tabbed-header li a, ul.latest-comment-list li cite, ul.latest-comment-list li .ctime,.login-widget input[type="text"], .login-widget input[type="password"],input[type="button"], input[type="reset"], input[type="submit"],input[type="email"], .login-pwd-wrap span, .login-widget .login-button,ul.login-links li a, .login-widget label, .first-weather .weather-date,.first-weather .weather-result span, .w-item-title, .w-item-content ul li,.poll-widget ul li .poll-title, .poll-widget p, .poll-widget ul li small,.poll-widget ul li button.poll-vote, ul.twiter-list, .sidebar .widget_categories,.sidebar .widget_archive, .secondary-sidebar .widget_categories,.search-form .search-field, .footer .newsletter .nsf, .footer .newsletter .nsb,footer.footer, .footer-menu, .footer-bottom, ol.nb-tabbed-head li a,.nb2 ul li.show-more a, .cat-slider-nav-title, .cat-slider-pop, .entry-crumbs,.entry-content-data .story-highlights ul li, .entry-tag-links, .mom-share-buttons a,.mom-share-post .sh_arrow, .post-nav-links, .author-bio-name a, .comment-list .single-comment cite,.comment-list .single-comment time, .comment-list .single-comment .comment-reply-link,.media-sort-title, .media-cat-filter li, .weather-switch-tabs a, .t-w-title .weather-date,.weather-results-status, .find-weather-box, .adv-search-form label,.adv-search-form .submit, .ajax-search-results a, .mom-megamenu .view-all-link,.widget_pages li, .widget_meta li, .widget_recent_comments li, .widget_recent_entries li,.widget_rss li, .span.blog-timeline-date, .blog-timeline-more, .user-login-links li a,.nsd, .mom-reveiw-system .review-header h2, .today_date, a.read-more,button, .pagination, h1, h2, h3, h4, h5, h6, input[type="text"], textarea,select, .not-valid-city, .entry-content blockquote, ul.mom_tabs li a,.media-cat-filter li, .widget_archive li, .widget_nav_menu ul a, .mobile-menu li a,.device-menu-holder, #navigation .device-menu li.menu-item > a, .section-header h1.section-title2,section-header span.mom-sub-title, .mom-reveiw-system .review-circle .circle .val,.mom-reveiw-system .review-circles .review-circle, .mom-reveiw-system .score-wrap .review-circle,.review-footer .total-votes, .rs-smaller_than_default.mom-reveiw-system .stars-cr,.review-summary .review-score .score-wrap.stars-score .score-title,.mom-reveiw-system .review-summary .review-score .score, .rs-smaller_than_default.mom-reveiw-system .mom-bar .mb-inner .cr,.mom-reveiw-system .mom-bar .mb-score, .mom-reveiw-system .review-summary .review-score .score-wrap,footer.author-box-footer span, .weather-switch-tabs label, .main_tabs .tabs a,.wp-caption-text, th, .bbp-forum-info, .bbp-forums li, #bbpress-forums .mom-bbp-content,.bbp-topics li, .bbp-pagination, .mom-main-font, .widget_display_stats,#buddypress div.item-list-tabs ul, #buddypress button, #buddypress a.button,#buddypress input[type=submit], #buddypress input[type=button], #buddypress input[type=reset],#buddypress ul.button-nav li a, #buddypress div.generic-button a, #buddypress .comment-reply-link,a.bp-title-button, #buddypress .activity-list li.load-more, #buddypress .activity-list li.load-newest,.widget.buddypress ul.item-list, .bp-login-widget-user-links, .vid-box-nav li h2,.chat-author, .photo-credit, .wp-polls-form,.secondary-sidebar .social-counter li, .mom-members, .feature-cat-slider .cat-label, widget-tabbed-body, .numbers_bullets .def-slider .owl-dots > div, .mom_cat_num, .mom_cat_link{font-family:'Times New Roman', Times,serif;font-weight:normal;}
+		                    body
+							.mom-megamenu .sub-mom-megamenu2 ul li h2 a,
+							.mom-megamenu .sub-mom-megamenu ul li h2 a,
+							ul.webticker li h4,
+							.entry-meta a,
+							.entry-meta,
+							.review-widget li .rev-title,
+							.review-widget li small,
+							.widget_rss .rss-date{font-family:'Times New Roman', Times,serif;font-weight:normal;}body, article .entry-content{font-family:'Times New Roman', Times,serif;font-weight:400;font-style:normal;}article .entry-content p, article .entry-content{font-family:'Times New Roman', Times,serif;line-height:20px;font-weight:normal;font-style:normal;font-size:14px;}.entry-content blockquote{font-family:'Times New Roman', Times,serif;font-weight:normal;font-style:normal;}input, input[type="text"], textarea, select{font-family:'Times New Roman', Times,serif;font-weight:normal;font-style:normal;}ul.main-menu > li{font-family:'Times New Roman', Times,serif;font-weight:400;font-style:normal;}ul.top-menu li{font-family:'Times New Roman', Times,serif;font-weight:normal;font-style:normal;}header.block-title h2 a, header.block-title h2, .section-header h2.section-title a, .section-header h2.section-title{font-family:'Times New Roman', Times,serif;line-height:35px;font-weight:400;font-style:normal;font-size:16px;}.widget-title h4, .widget-title h2{font-family:'Times New Roman', Times,serif;line-height:35px;font-weight:400;font-style:normal;font-size:16px;}.entry-content h1{font-family:'Times New Roman', Times,serif;font-weight:400;font-style:normal;}.entry-content h2{font-family:'Times New Roman', Times,serif;font-weight:400;font-style:normal;}.entry-content h3{font-family:'Times New Roman', Times,serif;line-height:20px;font-weight:400;font-style:normal;font-size:10px;}.entry-content h4{font-family:'Times New Roman', Times,serif;line-height:16px;font-weight:400;font-style:normal;font-size:16px;}</style> <style type="text/css" class="multinews-custom-dynamic-css">
+					header.block-title h2 a, header.block-title h2, .section-header h2.section-title a, .section-header h2.section-title{
+			color: ;
+		}
+				.widget-title h2{
+			color: ;
+		}
+				.header-wrap > .inner,
+		.header-wrap{
+			line-height: 150px;
+			height: 150px;
+		}
+						.navigation .mom-megamenu ul li.active:before, .navigation .mom-megamenu ul li:hover:before{
+			border-left-color: rgba(50,138,216,1);
+		}
+				.navigation .mom-megamenu ul li:last-child {
+			border-color: #000000 !important;
+		}
+				/* navigation style */
+		.navigation{
+		height: 42px;
+	}
+	ul.main-menu > li > a{
+		padding-bottom: 0 !important;
+	}
+	.navigation ul.main-menu > li .mom-megamenu,
+	.navigation ul.main-menu > li:not(.mom_mega) ul.sub-menu{
+		top: 42px;
+	}
+	.navigation ul.main-menu > li .mom-megamenu ul.sub-menu{
+		top: 0;
+	}
+	.navigation ul.main-menu li a span.menu_bl{
+		display: none;
+	}
+			
+	
+		                    .header-wrap{ padding:0 !important; }                body {
+
+}
+
+/* ==========================================================================
+                 	Visual composer
+========================================================================== */
+.wpb_row, .wpb_content_element, ul.wpb_thumbnails-fluid > li, .wpb_button {
+    margin-bottom: 20px;
+}
+.wpb_row .wpb_wrapper > *:last-child {
+	margin-bottom: 0;
+}
+
+.inner, .main-container {
+width:auto;
+padding: 0 20px;
+}
+	.fixed, .fixed2 {
+	width:1290;
+	}
+.mom_contet_ads.mc-ad-right {
+    margin-left: 665px;
+}
+.mom_contet_ads.mc-ad-left {
+	margin-right: 665px;
+
+}
+
+.main-content, .main-content.vc_column_container {
+width:49;
+}
+.sidebar, .sidebar.vc_column_container, .media-filter {
+width:31%;
+}
+.secondary-sidebar, .secondary-sidebar.vc_column_container {
+width:17%;
+}
+.one_side_bar_layout:not(.both-sides-true) .fixed, .one_side_bar_layout:not(.both-sides-true) .fixed2 {
+width:1290;
+}
+.mom_contet_ads.mc-ad-right {
+    margin-left: 665px;
+}
+.mom_contet_ads.mc-ad-left {
+	margin-right: 665px;
+
+}
+
+</style>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script src="https://www.alemarahenglish.af/wp-includes/js/wp-emoji-release.min.js?ver=6.1.1" type="text/javascript" defer=""></script><style>hcfy-result.__hcfy__result__loaded__.__hcfy__result__both__{border: 1px dotted}</style><script charset="utf-8" src="https://platform.twitter.com/js/horizon_timeline.4836f7a62ef55f5880337b3b6602854f.js"></script><link rel="prefetch" href="https://www.alemarahenglish.af/category/news/"><link rel="prefetch" href="https://www.alemarahenglish.af/category/top-news/"><link rel="prefetch" href="https://www.alemarahenglish.af/category/15/"><link rel="prefetch" href="https://www.alemarahenglish.af/qoshtipa-canal-a-step-towards-self-sufficient-afghanistan/"></head>
+<body class="post-template-default single single-post postid-53866 single-format-standard both-sidebars-all both-sides-true singular hst1 no-post-format-icons responsive_enabled show_sidebar_on_ipad multinews-2.8 mom-body wpb-js-composer js-comp-ver-6.6.0 vc_responsive" role="article" itemscope="" itemtype="http://schema.org/Article" data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0.49803921568627"></feFuncR><feFuncG type="table" tableValues="0 0.49803921568627"></feFuncG><feFuncB type="table" tableValues="0 0.49803921568627"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 0.27843137254902"></feFuncG><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0"></feFuncR><feFuncG type="table" tableValues="0 0.64705882352941"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.78039215686275 1"></feFuncR><feFuncG type="table" tableValues="0 0.94901960784314"></feFuncG><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.44705882352941 0.4"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.098039215686275 1"></feFuncR><feFuncG type="table" tableValues="0 0.66274509803922"></feFuncG><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg> <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+<div class="wrap_every_thing">
+<div class="fixed_wrap fixed clearfix">
+<div class="wrap clearfix">
+<header class="header">
+<div id="header-wrapper">
+<div class="top-bar">
+<div class="inner">
+<div class="today_date">
+<p>November 30, 2022</p>
+</div>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 0px 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {background: #005596;}
+
+.success {color: white;}
+.info {color: white;}
+.warning {color: white;}
+.danger {color: white;}
+.default {color: white;}
+</style>
+
+
+<a href="https://alemarah.af/"><button class="btn danger"> Pashto </button>
+</a><a href="https://alemarahdari.af/"><button class="btn success"> Dari / Persian </button>
+</a><a href="https://alemaraharabic.af/"><button class="btn info"> Arabic </button>
+</a><a href="http://alemarahurdu.af/"><button class="btn warning"> Urdu </button>
+</a><a href=""><button class="btn danger"> </button>
+
+
+<div class="top-bar-right">
+</div>
+</a></div><a href="">
+</a></div><a href="">
+</a><div class="header-wrap"><a href="">
+</a><div class="inner"><a href="">
+</a><div class="logo" itemscope="itemscope" itemtype="http://schema.org/Organization"><a href="">
+<img class="print-logo entered lazyloaded" itemprop="logo" src="https://www.alemarahenglish.af/wp-content/uploads/2020/01/New-English.jpg" width="1170" height="147" alt="Islamic Emirate of Afghanistan" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2020/01/New-English.jpg" data-ll-status="loaded"><noscript><img class="print-logo" itemprop="logo" src="https://www.alemarahenglish.af/wp-content/uploads/2020/01/New-English.jpg" width="1170" height="147" alt="Islamic Emirate of Afghanistan"/></noscript>
+</a><a href="https://www.alemarahenglish.af" itemprop="url" title="Islamic Emirate of Afghanistan">
+<img itemprop="logo" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Islamic Emirate of Afghanistan" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2020/01/New-English.jpg"><noscript><img itemprop="logo" src="https://www.alemarahenglish.af/wp-content/uploads/2020/01/New-English.jpg" alt="Islamic Emirate of Afghanistan"/></noscript>
+<img itemprop="logo" class="mom_retina_logo" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Islamic Emirate of Afghanistan" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2020/01/New-English.jpg"><noscript><img itemprop="logo" class="mom_retina_logo" src="https://www.alemarahenglish.af/wp-content/uploads/2020/01/New-English.jpg" alt="Islamic Emirate of Afghanistan" /></noscript>
+</a>
+<meta itemprop="name" content="Islamic Emirate of Afghanistan">
+</div>
+</div>
+</div>
+</div>
+<nav id="navigation" class="navigation  dd-effect-slide " data-sticky_logo="" data-sticky_logo_width="" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+<div class="inner">
+<ul id="menu-home" class="main-menu main-default-menu"><li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-depth-0"><a href="https://www.alemarahenglish.af">Home<span class="menu_bl" style="background:;"></span></a></li>
+<li id="menu-item-6" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-parent-item menu-item-depth-0"><a href="https://www.alemarahenglish.af/category/news/">News<span class="menu_bl" style="background:;"></span></a>
+<ul class="sub-menu ">
+<li id="menu-item-31923" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent active menu-item-depth-1"><a href="https://www.alemarahenglish.af/category/news/">News</a></li>
+<li id="menu-item-31925" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-depth-1"><a href="https://www.alemarahenglish.af/category/top-news/">Top News</a></li>
+<li id="menu-item-31924" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-depth-1"><a href="https://www.alemarahenglish.af/category/photoreport/">Photoreport</a></li>
+</ul>
+<i class="responsive-caret"></i>
+</li>
+<li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-depth-0"><a href="https://www.alemarahenglish.af/category/weekily-comment/">Weekly Comment<span class="menu_bl" style="background:;"></span></a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-parent-item menu-item-depth-0"><a href="https://www.alemarahenglish.af/category/statements/">Statements<span class="menu_bl" style="background:;"></span></a>
+<ul class="sub-menu ">
+<li id="menu-item-31926" class="menu-item menu-item-type-taxonomy menu-item-object-category active menu-item-depth-1"><a href="https://www.alemarahenglish.af/category/remarks-reactions/">Remarks &amp; Reactions</a></li>
+</ul>
+<i class="responsive-caret"></i>
+</li>
+<li id="menu-item-5" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-depth-0"><a href="https://www.alemarahenglish.af/category/articles-and-opinions/">Articles and Opinions<span class="menu_bl" style="background:;"></span></a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-depth-0"><a href="https://www.alemarahenglish.af/category/interviewes-and-reports/">Interviews<span class="menu_bl" style="background:;"></span></a></li>
+<li id="menu-item-31928" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-depth-0"><a href="http://11">MISCELLANEOUS<span class="menu_bl" style="background:;"></span></a>
+<ul class="sub-menu ">
+<li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom active menu-item-depth-1"><a href="https://www.islam.org.af">Islam</a></li>
+<li id="menu-item-31931" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-1"><a href="https://www.mujali.af">Magazines</a></li>
+<li id="menu-item-32441" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-depth-1"><a href="https://www.videos.af">Video</a>
+<ul class="sub-menu ">
+<li id="menu-item-32442" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-2"><a href="https://www.tarani.af">Taraani</a></li>
+</ul>
+<i class="responsive-caret"></i>
+</li>
+</ul>
+<i class="responsive-caret"></i>
+</li>
+</ul>
+<div class="mom_visibility_device device-menu-wrap">
+<div class="device-menu-holder">
+<i class="momizat-icon-paragraph-justify2 mh-icon"></i> <span class="the_menu_holder_area"><i class="dmh-icon"></i>Menu</span><i class="mh-caret"></i>
+</div>
+<ul id="menu-home-1" class="device-menu"><li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-depth-0"><a href="https://www.alemarahenglish.af">Home<span class="menu_bl" style="background:;"></span></a></li>
+<li id="menu-item-6" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-parent-item menu-item-depth-0"><a href="https://www.alemarahenglish.af/category/news/">News<span class="menu_bl" style="background:;"></span></a>
+<ul class="sub-menu ">
+<li id="menu-item-31923" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent active menu-item-depth-1"><a href="https://www.alemarahenglish.af/category/news/">News</a></li>
+<li id="menu-item-31925" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-depth-1"><a href="https://www.alemarahenglish.af/category/top-news/">Top News</a></li>
+<li id="menu-item-31924" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-depth-1"><a href="https://www.alemarahenglish.af/category/photoreport/">Photoreport</a></li>
+</ul>
+<i class="responsive-caret"></i>
+</li>
+<li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-depth-0"><a href="https://www.alemarahenglish.af/category/weekily-comment/">Weekly Comment<span class="menu_bl" style="background:;"></span></a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-parent-item menu-item-depth-0"><a href="https://www.alemarahenglish.af/category/statements/">Statements<span class="menu_bl" style="background:;"></span></a>
+<ul class="sub-menu ">
+<li id="menu-item-31926" class="menu-item menu-item-type-taxonomy menu-item-object-category active menu-item-depth-1"><a href="https://www.alemarahenglish.af/category/remarks-reactions/">Remarks &amp; Reactions</a></li>
+</ul>
+<i class="responsive-caret"></i>
+</li>
+<li id="menu-item-5" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-depth-0"><a href="https://www.alemarahenglish.af/category/articles-and-opinions/">Articles and Opinions<span class="menu_bl" style="background:;"></span></a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-depth-0"><a href="https://www.alemarahenglish.af/category/interviewes-and-reports/">Interviews<span class="menu_bl" style="background:;"></span></a></li>
+<li id="menu-item-31928" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-depth-0"><a href="http://11">MISCELLANEOUS<span class="menu_bl" style="background:;"></span></a>
+<ul class="sub-menu ">
+<li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom active menu-item-depth-1"><a href="https://www.islam.org.af">Islam</a></li>
+<li id="menu-item-31931" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-1"><a href="https://www.mujali.af">Magazines</a></li>
+<li id="menu-item-32441" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-depth-1"><a href="https://www.videos.af">Video</a>
+<ul class="sub-menu ">
+<li id="menu-item-32442" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-depth-2"><a href="https://www.tarani.af">Taraani</a></li>
+</ul>
+<i class="responsive-caret"></i>
+</li>
+</ul>
+<i class="responsive-caret"></i>
+</li>
+</ul> </div>
+<div class="clear"></div>
+</div>
+</nav>
+<div class="breaking-news nav-login-on">
+<div class="inner">
+<div class="breaking-news-items">
+<span class="breaking-title">BREAKING NEWS</span>
+<div class="breaking-cont">
+<div class="tickercontainer"><div class="mask"><ul class="webticker newsticker" data-br_type="default" data-br_speed="0.04" data-br_bspeed="600" data-br_duration="4000" style="width: 3533.02px; left: 560.8px;">
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/arcs-distributes-food-aid-to-500-families-in-khost/" rel="bookmark">ARCS distributes food aid to 500 families in Khost</a></h4></li>
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/" rel="bookmark">Foreign minister meets Pakistani delegation</a></h4></li>
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/two-smugglers-arrested-with-drugs-in-kabul/" rel="bookmark">Two smugglers arrested with drugs in Kabul</a></h4></li>
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/revenue-ghazni-transport-authority-increases-7-folds/" rel="bookmark">Revenue of Ghazni Transport Authority increases 7 folds</a></h4></li>
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/853-displaced-families-receive-cash-aid-in-wardak/" rel="bookmark">853 displaced families receive cash aid in Wardak</a></h4></li>
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/meeting-of-political-commission-convened/" rel="bookmark">Meeting of Political Commission Convened</a></h4></li>
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/2-thieves-held-in-kabul-stolen-items-recovered/" rel="bookmark">2 thieves held in Kabul, stolen items recovered</a></h4></li>
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/53842-2/" rel="bookmark">Over 3000 families receive food aid in Paktia</a></h4></li>
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/53837-2/" rel="bookmark">Nearly 400 police graduate from Parwan police training center</a></h4></li>
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/scores-of-light-and-heavy-weapons-handed-over-to-relevant-commission/" rel="bookmark">Scores of light and heavy weapons handed over to relevant commission</a></h4></li>
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/political-deputy-pm-meets-eu-charge-daffaires-for-afghanistan/" rel="bookmark">Political deputy PM meets EU Chargé d’Affaires for Afghanistan</a></h4></li>
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/4-arrested-for-plotting-terrorist-activities-in-kabul/" rel="bookmark">4 arrested for plotting terrorist activities in Kabul</a></h4></li>
+<li><h4><span class="enotype-icon-arrow-right6"></span><a href="https://www.alemarahenglish.af/deputy-pm-calls-for-investment-in-the-country/" rel="bookmark">Deputy PM Calls for Investment in the Country</a></h4></li>
+</ul></div></div>
+</div>
+</div>
+<div class="brmenu">
+<span class="nav-button nav-login">
+<i class="momizat-icon-users"></i>
+</span>
+<div class="nb-inner-wrap">
+<div class="nb-inner lw-inner">
+<div class="login-widget">
+<form action="https://www.alemarahenglish.af/wp-login.php" method="post">
+<div class="login-input-wrap login-user-wrap"><span class="momizat-icon-user3"></span><input type="text" class="login-user" name="log" id="log" value="Username" onfocus="if (this.value == 'Username') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Username';}"></div>
+<div class="login-input-wrap login-pwd-wrap"><span></span><input type="password" class="login-pwd" name="pwd" id="pwd" value="Password" onfocus="if (this.value == 'Password') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Password';}"></div>
+<input type="submit" class="login-button" name="submit" value="login">
+<input class="rememberme" name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever">
+<label for="rememberme">Remember Me</label>
+<input type="hidden" name="redirect_to" value="/foreign-minister-meets-pakistani-delegation/">
+</form>
+<ul class="login-links">
+<li><a href="https://www.alemarahenglish.af/wp-login.php?action=lostpassword">Lost your password?</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="https://www.alemarahenglish.af/wp-content/uploads/2022/11/20221129_173200-300x188.jpg">
+<meta itemprop="width" content="300">
+<meta itemprop="height" content="300">
+</div>
+<meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/">
+<div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+<div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="https://www.alemarahenglish.af/wp-content/uploads/2020/01/New-English.jpg">
+<meta itemprop="width" content="1170">
+<meta itemprop="height" content="147">
+</div>
+<meta itemprop="name" content="Islamic Emirate of Afghanistan">
+</div>
+<meta itemprop="datePublished" content="2022-11-29T12:33:13+00:00">
+<meta itemprop="dateModified" content="2022-11-29T12:35:54+00:00">
+<div class="main-container">
+<div class="main-left"><aside class="secondary-sidebar" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<div class="widget rpwe_widget recent-posts-extended"><div class="widget-title"><h4>Articles and Opinions</h4></div><div class="rpwe-block"><ul class="rpwe-ul"><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.alemarahenglish.af/us-should-respect-international-norms-and-implement-doha-agreement-in-full-spirit/" target="_self"><img class="rpwe-alignleft rpwe-thumb entered lazyloaded" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-220x150.jpeg" alt="US should Respect International Norms and Implement Doha Agreement in Full Spirit" height="150" width="220" loading="lazy" decoding="async" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-220x150.jpeg" data-ll-status="loaded"><noscript><img class="rpwe-alignleft rpwe-thumb" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-220x150.jpeg" alt="US should Respect International Norms and Implement Doha Agreement in Full Spirit" height="150" width="220" loading="lazy" decoding="async"></noscript></a><h3 class="rpwe-title"><a href="https://www.alemarahenglish.af/us-should-respect-international-norms-and-implement-doha-agreement-in-full-spirit/" target="_self">US should Respect International Norms and Implement Doha Agreement in Full Spirit</a></h3><time class="rpwe-time published" datetime="2022-11-26T15:15:15+00:00">November 26, 2022</time></li><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.alemarahenglish.af/qoshtipa-canal-a-step-towards-self-sufficient-afghanistan/" target="_self"><img class="rpwe-alignleft rpwe-thumb entered lazyloaded" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-220x150.jpeg" alt="Qushtipa Canal, a Concrete Step Towards Self-sufficient Afghanistan" height="150" width="220" loading="lazy" decoding="async" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-220x150.jpeg" data-ll-status="loaded"><noscript><img class="rpwe-alignleft rpwe-thumb" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-220x150.jpeg" alt="Qushtipa Canal, a Concrete Step Towards Self-sufficient Afghanistan" height="150" width="220" loading="lazy" decoding="async"></noscript></a><h3 class="rpwe-title"><a href="https://www.alemarahenglish.af/qoshtipa-canal-a-step-towards-self-sufficient-afghanistan/" target="_self">Qushtipa Canal, a Concrete Step Towards Self-sufficient Afghanistan</a></h3><time class="rpwe-time published" datetime="2022-11-23T08:05:28+00:00">November 23, 2022</time></li><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.alemarahenglish.af/number-of-tourists-visiting-bamyans-historical-sites-tremendously-increased/" target="_self"><img class="rpwe-alignleft rpwe-thumb entered lazyloaded" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/Bamiyan_3-768x515-1-220x150.jpg" alt="Tourists visiting Bamyan’s historical sites tremendously increased" height="150" width="220" loading="lazy" decoding="async" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/Bamiyan_3-768x515-1-220x150.jpg" data-ll-status="loaded"><noscript><img class="rpwe-alignleft rpwe-thumb" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/Bamiyan_3-768x515-1-220x150.jpg" alt="Tourists visiting Bamyan’s historical sites tremendously increased" height="150" width="220" loading="lazy" decoding="async"></noscript></a><h3 class="rpwe-title"><a href="https://www.alemarahenglish.af/number-of-tourists-visiting-bamyans-historical-sites-tremendously-increased/" target="_self">Tourists visiting Bamyan’s historical sites tremendously increased</a></h3><time class="rpwe-time published" datetime="2022-11-21T08:49:42+00:00">November 21, 2022</time></li><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.alemarahenglish.af/iea-recognation-a-must-step-for-development-of-the-country-and-region/" target="_self"><img class="rpwe-alignleft rpwe-thumb entered lazyloaded" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/WhatsApp-Image-2022-08-19-at-10.57.02-AM-780x470-1.jpeg-220x150.jpg" alt="IEA Recognition, a Vital Step for Development of the Country and Region" height="150" width="220" loading="lazy" decoding="async" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/WhatsApp-Image-2022-08-19-at-10.57.02-AM-780x470-1.jpeg-220x150.jpg" data-ll-status="loaded"><noscript><img class="rpwe-alignleft rpwe-thumb" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/WhatsApp-Image-2022-08-19-at-10.57.02-AM-780x470-1.jpeg-220x150.jpg" alt="IEA Recognition, a Vital Step for Development of the Country and Region" height="150" width="220" loading="lazy" decoding="async"></noscript></a><h3 class="rpwe-title"><a href="https://www.alemarahenglish.af/iea-recognation-a-must-step-for-development-of-the-country-and-region/" target="_self">IEA Recognition, a Vital Step for Development of the Country and Region</a></h3><time class="rpwe-time published" datetime="2022-11-09T02:33:59+00:00">November 9, 2022</time></li><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.alemarahenglish.af/expending-ties-of-the-iea-with-world/" target="_self"><img class="rpwe-alignleft rpwe-thumb" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" alt="Expending Ties of the IEA with the World" height="150" width="220" loading="lazy" decoding="async" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-220x150.jpg"><noscript><img class="rpwe-alignleft rpwe-thumb" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-220x150.jpg" alt="Expending Ties of the IEA with the World" height="150" width="220" loading="lazy" decoding="async"></noscript></a><h3 class="rpwe-title"><a href="https://www.alemarahenglish.af/expending-ties-of-the-iea-with-world/" target="_self">Expending Ties of the IEA with the World</a></h3><time class="rpwe-time published" datetime="2022-11-05T02:48:55+00:00">November 5, 2022</time></li></ul></div></div><div class="widget momizat-ads clearfix"><div class="widget-title"><h4>Ministries </h4></div> <div class="mom-ads-wrap  ">
+<div class="mom-ads ads-layout-grid" style="">
+<div class="mom-ads-inner">
+<div class="mom-ad" data-id="31911" style="width:110px; height:130px; ">
+<a href="https://mfa.gov.af/en/home-2/" target="_self"><img class="appear" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%20130'%3E%3C/svg%3E" alt="Ministries" width="110" height="130" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/03/BLeov7UA_400x400.jpg"><noscript><img class="appear" src="https://www.alemarahenglish.af/wp-content/uploads/2022/03/BLeov7UA_400x400.jpg" alt="Ministries" width="110" height="130"></noscript></a>
+</div>
+<div class="mom-ad" data-id="31911" style="width:110px; height:130px; ">
+<a href="https://moi.gov.af/" target="_self"><img class="appear" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%20130'%3E%3C/svg%3E" alt="Ministries" width="110" height="130" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/03/Sp10-nQF_400x400.jpg"><noscript><img class="appear" src="https://www.alemarahenglish.af/wp-content/uploads/2022/03/Sp10-nQF_400x400.jpg" alt="Ministries" width="110" height="130"></noscript></a>
+</div>
+<div class="mom-ad" data-id="31911" style="width:110px; height:130px; ">
+<a href="#" target="_self"><img class="appear" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%20130'%3E%3C/svg%3E" alt="Ministries" width="110" height="130" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/03/15oRWznB_400x400.jpg"><noscript><img class="appear" src="https://www.alemarahenglish.af/wp-content/uploads/2022/03/15oRWznB_400x400.jpg" alt="Ministries" width="110" height="130"></noscript></a>
+</div>
+<div class="mom-ad" data-id="31911" style="width:110px; height:130px; ">
+<a href="#" target="_self"><img class="appear" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%20130'%3E%3C/svg%3E" alt="Ministries" width="110" height="130" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/03/4oHx6w7G_400x400.jpg"><noscript><img class="appear" src="https://www.alemarahenglish.af/wp-content/uploads/2022/03/4oHx6w7G_400x400.jpg" alt="Ministries" width="110" height="130"></noscript></a>
+</div>
+<div class="mom-ad" data-id="31911" style="width:110px; height:130px; ">
+<a href="#" target="_self"><img class="appear" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%20130'%3E%3C/svg%3E" alt="Ministries" width="110" height="130" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/03/MzrSv9bM_400x400.jpg"><noscript><img class="appear" src="https://www.alemarahenglish.af/wp-content/uploads/2022/03/MzrSv9bM_400x400.jpg" alt="Ministries" width="110" height="130"></noscript></a>
+</div>
+<div class="mom-ad" data-id="31911" style="width:110px; height:130px; ">
+<a href="https://www.mof.gov.af/" target="_self"><img class="appear" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%20130'%3E%3C/svg%3E" alt="Ministries" width="110" height="130" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/09/logo_2_0.jpg"><noscript><img class="appear" src="https://www.alemarahenglish.af/wp-content/uploads/2022/09/logo_2_0.jpg" alt="Ministries" width="110" height="130"></noscript></a>
+</div>
+</div>
+</div> 
+</div>
+</div><div class="widget rpwe_widget recent-posts-extended"><div class="widget-title"><h4>Peace and Security</h4></div><div class="rpwe-block"><ul class="rpwe-ul"><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.alemarahenglish.af/two-smugglers-arrested-with-drugs-in-kabul/" target="_self"><img class="rpwe-alignleft rpwe-thumb" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2045%2045'%3E%3C/svg%3E" alt="Two smugglers arrested with drugs in Kabul" height="45" width="45" loading="lazy" decoding="async" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221129-WA0026-750x375-1-45x45.jpg"><noscript><img class="rpwe-alignleft rpwe-thumb" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221129-WA0026-750x375-1-45x45.jpg" alt="Two smugglers arrested with drugs in Kabul" height="45" width="45" loading="lazy" decoding="async"></noscript></a><h3 class="rpwe-title"><a href="https://www.alemarahenglish.af/two-smugglers-arrested-with-drugs-in-kabul/" target="_self">Two smugglers arrested with drugs in Kabul</a></h3><time class="rpwe-time published" datetime="2022-11-29T12:18:29+00:00">November 29, 2022</time></li><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.alemarahenglish.af/2-thieves-held-in-kabul-stolen-items-recovered/" target="_self"><img class="rpwe-alignleft rpwe-thumb" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2045%2045'%3E%3C/svg%3E" alt="2 thieves held in Kabul, stolen items recovered" height="45" width="45" loading="lazy" decoding="async" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/Screenshot_20221128-215807_Twitter-45x45.jpg"><noscript><img class="rpwe-alignleft rpwe-thumb" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/Screenshot_20221128-215807_Twitter-45x45.jpg" alt="2 thieves held in Kabul, stolen items recovered" height="45" width="45" loading="lazy" decoding="async"></noscript></a><h3 class="rpwe-title"><a href="https://www.alemarahenglish.af/2-thieves-held-in-kabul-stolen-items-recovered/" target="_self">2 thieves held in Kabul, stolen items recovered</a></h3><time class="rpwe-time published" datetime="2022-11-28T17:01:42+00:00">November 28, 2022</time></li><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.alemarahenglish.af/scores-of-light-and-heavy-weapons-handed-over-to-relevant-commission/" target="_self"><img class="rpwe-alignleft rpwe-thumb" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2045%2045'%3E%3C/svg%3E" alt="Scores of light and heavy weapons handed over to relevant commission" height="45" width="45" loading="lazy" decoding="async" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221127-WA0074-750x375-1-45x45.jpg"><noscript><img class="rpwe-alignleft rpwe-thumb" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221127-WA0074-750x375-1-45x45.jpg" alt="Scores of light and heavy weapons handed over to relevant commission" height="45" width="45" loading="lazy" decoding="async"></noscript></a><h3 class="rpwe-title"><a href="https://www.alemarahenglish.af/scores-of-light-and-heavy-weapons-handed-over-to-relevant-commission/" target="_self">Scores of light and heavy weapons handed over to relevant commission</a></h3><time class="rpwe-time published" datetime="2022-11-27T15:30:41+00:00">November 27, 2022</time></li><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.alemarahenglish.af/4-arrested-for-plotting-terrorist-activities-in-kabul/" target="_self"><img class="rpwe-alignleft rpwe-thumb" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2045%2045'%3E%3C/svg%3E" alt="4 arrested for plotting terrorist activities in Kabul" height="45" width="45" loading="lazy" decoding="async" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/Screenshot_20221127-132806_Twitter-45x45.jpg"><noscript><img class="rpwe-alignleft rpwe-thumb" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/Screenshot_20221127-132806_Twitter-45x45.jpg" alt="4 arrested for plotting terrorist activities in Kabul" height="45" width="45" loading="lazy" decoding="async"></noscript></a><h3 class="rpwe-title"><a href="https://www.alemarahenglish.af/4-arrested-for-plotting-terrorist-activities-in-kabul/" target="_self">4 arrested for plotting terrorist activities in Kabul</a></h3><time class="rpwe-time published" datetime="2022-11-27T08:33:50+00:00">November 27, 2022</time></li><li class="rpwe-li rpwe-clearfix"><a class="rpwe-img" href="https://www.alemarahenglish.af/two-murderous-robbers-held-kabul/" target="_self"><img class="rpwe-alignleft rpwe-thumb" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2045%2045'%3E%3C/svg%3E" alt="Two murderous robbers held Kabul" height="45" width="45" loading="lazy" decoding="async" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221126-WA0126-750x375-1-45x45.jpg"><noscript><img class="rpwe-alignleft rpwe-thumb" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221126-WA0126-750x375-1-45x45.jpg" alt="Two murderous robbers held Kabul" height="45" width="45" loading="lazy" decoding="async"></noscript></a><h3 class="rpwe-title"><a href="https://www.alemarahenglish.af/two-murderous-robbers-held-kabul/" target="_self">Two murderous robbers held Kabul</a></h3><time class="rpwe-time published" datetime="2022-11-26T15:25:02+00:00">November 26, 2022</time></li></ul></div></div><div class="widget widget_calendar"><div class="widget-title"><h4>Calendar</h4></div><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar" class="wp-calendar-table">
+<caption>November 2022</caption>
+<thead>
+<tr>
+<th scope="col" title="Monday">M</th>
+<th scope="col" title="Tuesday">T</th>
+<th scope="col" title="Wednesday">W</th>
+<th scope="col" title="Thursday">T</th>
+<th scope="col" title="Friday">F</th>
+<th scope="col" title="Saturday">S</th>
+<th scope="col" title="Sunday">S</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="1" class="pad">&nbsp;</td><td><a href="https://www.alemarahenglish.af/2022/11/01/" aria-label="Posts published on November 1, 2022">1</a></td><td><a href="https://www.alemarahenglish.af/2022/11/02/" aria-label="Posts published on November 2, 2022">2</a></td><td><a href="https://www.alemarahenglish.af/2022/11/03/" aria-label="Posts published on November 3, 2022">3</a></td><td>4</td><td><a href="https://www.alemarahenglish.af/2022/11/05/" aria-label="Posts published on November 5, 2022">5</a></td><td><a href="https://www.alemarahenglish.af/2022/11/06/" aria-label="Posts published on November 6, 2022">6</a></td>
+</tr>
+<tr>
+<td><a href="https://www.alemarahenglish.af/2022/11/07/" aria-label="Posts published on November 7, 2022">7</a></td><td><a href="https://www.alemarahenglish.af/2022/11/08/" aria-label="Posts published on November 8, 2022">8</a></td><td><a href="https://www.alemarahenglish.af/2022/11/09/" aria-label="Posts published on November 9, 2022">9</a></td><td><a href="https://www.alemarahenglish.af/2022/11/10/" aria-label="Posts published on November 10, 2022">10</a></td><td><a href="https://www.alemarahenglish.af/2022/11/11/" aria-label="Posts published on November 11, 2022">11</a></td><td><a href="https://www.alemarahenglish.af/2022/11/12/" aria-label="Posts published on November 12, 2022">12</a></td><td><a href="https://www.alemarahenglish.af/2022/11/13/" aria-label="Posts published on November 13, 2022">13</a></td>
+</tr>
+<tr>
+<td><a href="https://www.alemarahenglish.af/2022/11/14/" aria-label="Posts published on November 14, 2022">14</a></td><td><a href="https://www.alemarahenglish.af/2022/11/15/" aria-label="Posts published on November 15, 2022">15</a></td><td><a href="https://www.alemarahenglish.af/2022/11/16/" aria-label="Posts published on November 16, 2022">16</a></td><td><a href="https://www.alemarahenglish.af/2022/11/17/" aria-label="Posts published on November 17, 2022">17</a></td><td><a href="https://www.alemarahenglish.af/2022/11/18/" aria-label="Posts published on November 18, 2022">18</a></td><td><a href="https://www.alemarahenglish.af/2022/11/19/" aria-label="Posts published on November 19, 2022">19</a></td><td><a href="https://www.alemarahenglish.af/2022/11/20/" aria-label="Posts published on November 20, 2022">20</a></td>
+</tr>
+<tr>
+<td><a href="https://www.alemarahenglish.af/2022/11/21/" aria-label="Posts published on November 21, 2022">21</a></td><td><a href="https://www.alemarahenglish.af/2022/11/22/" aria-label="Posts published on November 22, 2022">22</a></td><td><a href="https://www.alemarahenglish.af/2022/11/23/" aria-label="Posts published on November 23, 2022">23</a></td><td><a href="https://www.alemarahenglish.af/2022/11/24/" aria-label="Posts published on November 24, 2022">24</a></td><td>25</td><td><a href="https://www.alemarahenglish.af/2022/11/26/" aria-label="Posts published on November 26, 2022">26</a></td><td><a href="https://www.alemarahenglish.af/2022/11/27/" aria-label="Posts published on November 27, 2022">27</a></td>
+</tr>
+<tr>
+<td><a href="https://www.alemarahenglish.af/2022/11/28/" aria-label="Posts published on November 28, 2022">28</a></td><td><a href="https://www.alemarahenglish.af/2022/11/29/" aria-label="Posts published on November 29, 2022">29</a></td><td id="today">30</td>
+<td class="pad" colspan="4">&nbsp;</td>
+</tr>
+</tbody>
+</table><nav aria-label="Previous and next months" class="wp-calendar-nav">
+<span class="wp-calendar-nav-prev"><a href="https://www.alemarahenglish.af/2022/10/">« Oct</a></span>
+<span class="pad">&nbsp;</span>
+<span class="wp-calendar-nav-next">&nbsp;</span>
+</nav></div></div><div class="widget widget_archive"><div class="widget-title"><h4>Archives</h4></div> <label class="screen-reader-text" for="archives-dropdown-2">Archives</label>
+<div class="mom-select"><select id="archives-dropdown-2" name="archive-dropdown">
+<option value="">Select Month</option>
+<option value="https://www.alemarahenglish.af/2022/11/"> November 2022 </option>
+<option value="https://www.alemarahenglish.af/2022/10/"> October 2022 </option>
+<option value="https://www.alemarahenglish.af/2022/09/"> September 2022 </option>
+<option value="https://www.alemarahenglish.af/2022/07/"> July 2022 </option>
+<option value="https://www.alemarahenglish.af/2022/06/"> June 2022 </option>
+<option value="https://www.alemarahenglish.af/2022/05/"> May 2022 </option>
+<option value="https://www.alemarahenglish.af/2022/04/"> April 2022 </option>
+<option value="https://www.alemarahenglish.af/2022/03/"> March 2022 </option>
+<option value="https://www.alemarahenglish.af/2022/02/"> February 2022 </option>
+<option value="https://www.alemarahenglish.af/2022/01/"> January 2022 </option>
+<option value="https://www.alemarahenglish.af/2021/12/"> December 2021 </option>
+<option value="https://www.alemarahenglish.af/2021/11/"> November 2021 </option>
+<option value="https://www.alemarahenglish.af/2021/10/"> October 2021 </option>
+<option value="https://www.alemarahenglish.af/2021/09/"> September 2021 </option>
+<option value="https://www.alemarahenglish.af/2021/08/"> August 2021 </option>
+<option value="https://www.alemarahenglish.af/2021/07/"> July 2021 </option>
+<option value="https://www.alemarahenglish.af/2021/06/"> June 2021 </option>
+<option value="https://www.alemarahenglish.af/2021/05/"> May 2021 </option>
+<option value="https://www.alemarahenglish.af/2021/04/"> April 2021 </option>
+<option value="https://www.alemarahenglish.af/2021/03/"> March 2021 </option>
+<option value="https://www.alemarahenglish.af/2021/02/"> February 2021 </option>
+<option value="https://www.alemarahenglish.af/2021/01/"> January 2021 </option>
+<option value="https://www.alemarahenglish.af/2020/12/"> December 2020 </option>
+<option value="https://www.alemarahenglish.af/2020/11/"> November 2020 </option>
+<option value="https://www.alemarahenglish.af/2020/10/"> October 2020 </option>
+<option value="https://www.alemarahenglish.af/2020/09/"> September 2020 </option>
+<option value="https://www.alemarahenglish.af/2020/08/"> August 2020 </option>
+<option value="https://www.alemarahenglish.af/2020/07/"> July 2020 </option>
+<option value="https://www.alemarahenglish.af/2020/06/"> June 2020 </option>
+<option value="https://www.alemarahenglish.af/2020/05/"> May 2020 </option>
+<option value="https://www.alemarahenglish.af/2020/04/"> April 2020 </option>
+<option value="https://www.alemarahenglish.af/2020/03/"> March 2020 </option>
+<option value="https://www.alemarahenglish.af/2020/02/"> February 2020 </option>
+<option value="https://www.alemarahenglish.af/2020/01/"> January 2020 </option>
+<option value="https://www.alemarahenglish.af/2019/12/"> December 2019 </option>
+<option value="https://www.alemarahenglish.af/2019/11/"> November 2019 </option>
+<option value="https://www.alemarahenglish.af/2019/09/"> September 2019 </option>
+<option value="https://www.alemarahenglish.af/2019/06/"> June 2019 </option>
+<option value="https://www.alemarahenglish.af/2018/06/"> June 2018 </option>
+<option value="https://www.alemarahenglish.af/2018/05/"> May 2018 </option>
+<option value="https://www.alemarahenglish.af/2018/04/"> April 2018 </option>
+<option value="https://www.alemarahenglish.af/2018/03/"> March 2018 </option>
+<option value="https://www.alemarahenglish.af/2018/02/"> February 2018 </option>
+<option value="https://www.alemarahenglish.af/2018/01/"> January 2018 </option>
+<option value="https://www.alemarahenglish.af/2017/12/"> December 2017 </option>
+<option value="https://www.alemarahenglish.af/2017/11/"> November 2017 </option>
+<option value="https://www.alemarahenglish.af/2017/10/"> October 2017 </option>
+<option value="https://www.alemarahenglish.af/2017/09/"> September 2017 </option>
+<option value="https://www.alemarahenglish.af/2017/08/"> August 2017 </option>
+<option value="https://www.alemarahenglish.af/2017/07/"> July 2017 </option>
+<option value="https://www.alemarahenglish.af/2017/06/"> June 2017 </option>
+<option value="https://www.alemarahenglish.af/2017/05/"> May 2017 </option>
+<option value="https://www.alemarahenglish.af/2017/04/"> April 2017 </option>
+<option value="https://www.alemarahenglish.af/2017/03/"> March 2017 </option>
+<option value="https://www.alemarahenglish.af/2017/02/"> February 2017 </option>
+<option value="https://www.alemarahenglish.af/2017/01/"> January 2017 </option>
+<option value="https://www.alemarahenglish.af/2016/12/"> December 2016 </option>
+<option value="https://www.alemarahenglish.af/2016/11/"> November 2016 </option>
+<option value="https://www.alemarahenglish.af/2016/10/"> October 2016 </option>
+<option value="https://www.alemarahenglish.af/2016/09/"> September 2016 </option>
+<option value="https://www.alemarahenglish.af/2016/08/"> August 2016 </option>
+<option value="https://www.alemarahenglish.af/2016/07/"> July 2016 </option>
+<option value="https://www.alemarahenglish.af/2016/06/"> June 2016 </option>
+<option value="https://www.alemarahenglish.af/2016/05/"> May 2016 </option>
+<option value="https://www.alemarahenglish.af/2016/03/"> March 2016 </option>
+</select></div>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-2" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+</div></aside>
+<div class="main-content" role="main">
+<div class="site-content page-wrap">
+<article id="post-53866" class="post-53866 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-top-news" data-id="53866">
+<header>
+<h1 itemprop="headline" class="entry-title">Foreign minister meets Pakistani delegation</h1>
+<div class="entry-post-meta">
+<div>Date: <time content="2022-11-29T12:33:13+00:00" class="entry-date updated" datetime="2022-11-29T12:33:13+00:00">November 29, 2022</time></div>
+<div class="entry-cat">in: <a href="https://www.alemarahenglish.af/category/15/" rel="category tag">,</a>, <a href="https://www.alemarahenglish.af/category/news/" rel="category tag">News</a>, <a href="https://www.alemarahenglish.af/category/top-news/" rel="category tag">Top News</a></div>
+</div> <div class="top-share-icons">
+</div>
+</header>
+<div class="entry-content clearfix">
+<figure class="post-thumbnail" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
+<img class="post_layout_5_img entered lazyloaded" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/20221129_173200.jpg" alt="Foreign minister meets Pakistani delegation" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/20221129_173200.jpg" data-ll-status="loaded"><noscript><img class="post_layout_5_img" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/20221129_173200.jpg" alt="Foreign minister meets Pakistani delegation"></noscript></figure>
+ <div class="entry-content-data ">
+</div>
+<p>KABUL, Nov. 30.-&nbsp; Minister of Foreign Affairs of the IEA, Mawlawi Amir Khan Muttaqi along with several other officials of the said Ministry&nbsp; met with the Pakistani delegation at the Star Palace at capital Kabul, today.</p>
+<p>Pakistani delegation headed the Minister of State for Foreign Affairs, Hina Rabbani Khar, included the Special Representative for Afghanistan, Muhammad Sadiq Khan, and other officials of Pakistan’s Chargé d’Affaires in Kabul, Obaidul Rahman Nizamani.</p>
+<p>Foreign Minister Mawlawi Amir Khan Muttaqi welcomed the visiting delegation and called the relations between the two neighboring countries beneficial to the peoples of the region And reminded Pakistani side on creation of facilities, progress and speed in the field of trade and transit while expressing willingness to start TAPI, TAP, railway line and other big projects, as well as expressed the Islamic Emirate’s position on political relations, economic growth and security.</p>
+<p>The Pakistani delegation promised to cooperate on the good treatment of Afghan refugees in Pakistan, solving problems in travel routes and visas, assuring to take necessary steps regarding strengthening and development of trade and transit with Afghanistan.</p>
+<p>Hina Rabbani Khar noted that since Afghanistan and Pakistan are two neighboring Muslim countries and have cultural commonalities, the governments of both countries should cooperate with each other and protect mutual public interests.</p>
+<p>Let’s agree that new mechanisms will be created for bilateral cooperation that will explore all common opportunities and issues through dialogue and will be used for development, she said.</p>
+<p>At the end of the meeting, both sides expressed determination of taking useful and positive steps in the future to solve the problems.</p>
+<div class="clearfix"></div>
+</div>
+</article>
+<div class="clear"></div>
+<script>
+    jQuery(document).ready(function($) {
+        var url = 'https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/';
+        				        // linkedin
+        jQuery.getJSON(
+	    'http://www.linkedin.com/countserv/count/share?format=jsonp&url='+url+'&callback=?',
+            function (data) {
+
+                //console.log(data.count);
+                $('.share-linkedin .count').text(data.count);
+            }
+        );
+        		        // Pintrest
+        jQuery.getJSON(
+	    'http://api.pinterest.com/v1/urls/count.json?url='+url+'&callback=?',
+            function (data) {
+                //console.log(data.count);
+                $('.share-pin .count').text(data.count);
+            }
+        );
+            });
+
+
+</script>
+<div class="mom-share-post">
+<h4>share</h4>
+<div class="mom-share-buttons" style="height: 25px;">
+<a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/', 'Share This', 'menubar=no,toolbar=no,resizable=no,scrollbars=no, width=600,height=455');" class="share-facebook"><i class="enotype-icon-facebook"></i><span class="count">0</span></a>
+<a href="#" onclick="window.open('https://twitter.com/share?text=Foreign minister meets Pakistani delegation&amp;url=https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/', 'Post this On twitter', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,width=600,height=455');" class="share-twitter"><i class="momizat-icon-twitter"></i><span class="count"></span></a>
+
+<a href="whatsapp://send?text=Foreign minister meets Pakistani delegation - https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/" data-action="share/whatsapp/share" class="wabtn"><i class="fa-icon-whatsapp"></i></a> 
+<a href="#" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/&amp;title=Foreign minister meets Pakistani delegation&amp;source=https://www.alemarahenglish.af', 'Share This', 'width=600,height=455');" class="share-linkedin"><i class="fa-icon-linkedin"></i><span class="count">0</span></a>
+<a href="#" onclick="window.open('https://pinterest.com/pin/create/bookmarklet/?media=https://www.alemarahenglish.af/wp-content/uploads/2022/11/20221129_173200-300x188.jpg&amp;url=https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/&amp;is_video=false&amp;description=Foreign minister meets Pakistani delegation', 'Share this', 'width=600,height=455');" class="share-pin"><i class="enotype-icon-pinterest"></i><span class="count">0</span></a>
+<a href="#" onclick="window.open('https://vkontakte.ru/share.php?url=https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/&amp;title=Foreign minister meets Pakistani delegation&amp;image=https://www.alemarahenglish.af/wp-content/uploads/2022/11/20221129_173200.jpg&amp;description=KABUL, Nov. 30.-&nbsp; Minister of Foreign Affairs of the IEA, Mawlawi Amir Khan Muttaqi along with several other officials of the said Ministry&nbsp; met with the Pakist', 'Share this', 'width=600,height=455');" class="share-vk"><i class="fa-icon-vk"></i></a>
+<a href="#" onclick="window.open('https://www.xing.com/social_plugins/share?url=https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/&amp;wtmc=XING;&amp;sc_p=xing-share', 'Share this', 'width=600,height=455');" class="share-vk"><i class="fa-icon-xing"></i></a>
+<a href="mailto:?subject=Foreign minister meets Pakistani delegation&amp;body=KABUL%2C+Nov.+30.-%C2%A0+Minister+of+Foreign+Affairs+of+the+IEA%2C+Mawlawi+Amir+Khan+Muttaqi+along+with+several+other+officials+of+the+said+Ministry%C2%A0+met+with+the+Pakist : https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/" class="share-email"><i class="dashicons dashicons-email-alt"></i></a>
+<a href="javascript:window.print()" rel="nofollow" class="share-email"><i class="brankic-icon-printer"></i></a>
+</div>
+
+</div>
+<section class="post-section-box">
+<header class="post-section-title">
+<h2>Related posts</h2>
+</header>
+<ul class="mom-related-posts clearfix">
+<li>
+<div class="related_posts_item_inner">
+<figure class="post-thumbnail"><a href="https://www.alemarahenglish.af/arcs-distributes-food-aid-to-500-families-in-khost/">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20165%20109'%3E%3C/svg%3E" data-hidpi="https://www.alemarahenglish.af/wp-content/uploads/2022/11/20221129_182810-165x109.jpg" alt="ARCS distributes food aid to 500 families in Khost" width="165px" height="109px" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/20221129_182810-165x109.jpg"><noscript><img src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/20221129_182810-165x109.jpg" data-hidpi="https://www.alemarahenglish.af/wp-content/uploads/2022/11/20221129_182810-165x109.jpg" alt="ARCS distributes food aid to 500 families in Khost" width="165px" height="109px"></noscript> </a></figure>
+<h2><a href="https://www.alemarahenglish.af/arcs-distributes-food-aid-to-500-families-in-khost/" rel="bookmark">ARCS distributes food aid to 500 families in Khost</a></h2>
+<div class="entry-meta">
+<time datetime="2022-11-29T13:32:47+00:00" content="2022-11-29T13:32:47+00:00">November 29, 2022</time>
+</div>
+</div>
+</li>
+<li>
+<div class="related_posts_item_inner">
+<figure class="post-thumbnail"><a href="https://www.alemarahenglish.af/two-smugglers-arrested-with-drugs-in-kabul/">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20165%20109'%3E%3C/svg%3E" data-hidpi="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221129-WA0026-750x375-1-165x109.jpg" alt="Two smugglers arrested with drugs in Kabul" width="165px" height="109px" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221129-WA0026-750x375-1-165x109.jpg"><noscript><img src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221129-WA0026-750x375-1-165x109.jpg" data-hidpi="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221129-WA0026-750x375-1-165x109.jpg" alt="Two smugglers arrested with drugs in Kabul" width="165px" height="109px"></noscript> </a></figure>
+<h2><a href="https://www.alemarahenglish.af/two-smugglers-arrested-with-drugs-in-kabul/" rel="bookmark">Two smugglers arrested with drugs in Kabul</a></h2>
+<div class="entry-meta">
+<time datetime="2022-11-29T12:18:29+00:00" content="2022-11-29T12:18:29+00:00">November 29, 2022</time>
+</div>
+</div>
+</li>
+<li>
+<div class="related_posts_item_inner">
+<figure class="post-thumbnail"><a href="https://www.alemarahenglish.af/revenue-ghazni-transport-authority-increases-7-folds/">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20165%20109'%3E%3C/svg%3E" data-hidpi="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221104-WA0018-750x375-1-165x109.jpg" alt="Revenue of Ghazni Transport Authority increases 7 folds" width="165px" height="109px" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221104-WA0018-750x375-1-165x109.jpg"><noscript><img src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221104-WA0018-750x375-1-165x109.jpg" data-hidpi="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221104-WA0018-750x375-1-165x109.jpg" alt="Revenue of Ghazni Transport Authority increases 7 folds" width="165px" height="109px"></noscript> </a></figure>
+<h2><a href="https://www.alemarahenglish.af/revenue-ghazni-transport-authority-increases-7-folds/" rel="bookmark">Revenue of Ghazni Transport Authority increases 7 folds</a></h2>
+<div class="entry-meta">
+<time datetime="2022-11-28T17:37:50+00:00" content="2022-11-28T17:37:50+00:00">November 28, 2022</time>
+</div>
+</div>
+</li>
+</ul>
+</section>
+</div>
+</div>
+
+</div>
+<aside class="sidebar" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<div class="widget recent-posts-widget-with-thumbnails">
+<div id="rpwwt-recent-posts-widget-with-thumbnails-3" class="rpwwt-widget">
+<div class="widget-title"><h4>Essential Reading</h4></div>
+<ul>
+<li><a href="https://www.alemarahenglish.af/us-should-respect-international-norms-and-implement-doha-agreement-in-full-spirit/"><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-80x54.jpeg" class="attachment-75x50 size-75x50 wp-post-image entered lazyloaded" alt="" decoding="async" data-lazy-srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-80x54.jpeg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-274x183.jpeg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-364x245.jpeg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-130x87.jpeg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-359x240.jpeg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-85x57.jpeg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-546x365.jpeg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-266x179.jpeg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-165x109.jpeg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-347x233.jpeg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-112x75.jpeg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-179x116.jpeg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-576x392.jpeg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-170x113.jpeg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-333x227.jpeg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-81x55.jpeg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-765x510.jpeg 765w" data-lazy-sizes="(max-width: 75px) 100vw, 75px" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-80x54.jpeg" data-ll-status="loaded" sizes="(max-width: 75px) 100vw, 75px" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-80x54.jpeg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-274x183.jpeg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-364x245.jpeg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-130x87.jpeg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-359x240.jpeg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-85x57.jpeg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-546x365.jpeg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-266x179.jpeg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-165x109.jpeg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-347x233.jpeg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-112x75.jpeg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-179x116.jpeg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-576x392.jpeg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-170x113.jpeg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-333x227.jpeg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-81x55.jpeg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-765x510.jpeg 765w"><noscript><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-80x54.jpeg" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-80x54.jpeg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-274x183.jpeg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-364x245.jpeg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-130x87.jpeg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-359x240.jpeg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-85x57.jpeg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-546x365.jpeg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-266x179.jpeg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-165x109.jpeg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-347x233.jpeg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-112x75.jpeg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-179x116.jpeg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-576x392.jpeg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-170x113.jpeg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-333x227.jpeg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-81x55.jpeg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-4-765x510.jpeg 765w" sizes="(max-width: 75px) 100vw, 75px" /></noscript><span class="rpwwt-post-title">US should Respect International Norms and Implement Doha Agreement in Full Spirit</span></a><div class="rpwwt-post-date">November 26, 2022</div></li>
+<li><a href="https://www.alemarahenglish.af/iea-reject-claims-of-providing-construction-machinery-to-qatar/"><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-80x54.jpg" class="attachment-75x50 size-75x50 wp-post-image entered lazyloaded" alt="" decoding="async" loading="lazy" data-lazy-srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-765x510.jpg 765w" data-lazy-sizes="(max-width: 75px) 100vw, 75px" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-80x54.jpg" data-ll-status="loaded" sizes="(max-width: 75px) 100vw, 75px" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-765x510.jpg 765w"><noscript><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-80x54.jpg" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/10/Mof-765x510.jpg 765w" sizes="(max-width: 75px) 100vw, 75px" /></noscript><span class="rpwwt-post-title">IEA reject claims of providing construction machinery to Qatar</span></a><div class="rpwwt-post-date">November 26, 2022</div></li>
+<li><a href="https://www.alemarahenglish.af/iea-rejects-statement-of-unhcr-calls-it-disrespect-to-the-holy-religion-of-islam/"><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-80x54.jpg" class="attachment-75x50 size-75x50 wp-post-image entered lazyloaded" alt="" decoding="async" loading="lazy" data-lazy-srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-300x200.jpg 300w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-765x510.jpg 765w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1.jpg 768w" data-lazy-sizes="(max-width: 75px) 100vw, 75px" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-80x54.jpg" data-ll-status="loaded" sizes="(max-width: 75px) 100vw, 75px" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-300x200.jpg 300w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-765x510.jpg 765w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1.jpg 768w"><noscript><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-80x54.jpg" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-300x200.jpg 300w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1-765x510.jpg 765w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/mujahid-768x512-1.jpg 768w" sizes="(max-width: 75px) 100vw, 75px" /></noscript><span class="rpwwt-post-title">IEA Rejects Statement of OHCHR, Calls it Disrespect to the Holy Religion of Islam</span></a><div class="rpwwt-post-date">November 26, 2022</div></li>
+<li><a href="https://www.alemarahenglish.af/qoshtipa-canal-a-step-towards-self-sufficient-afghanistan/"><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-80x54.jpeg" class="attachment-75x50 size-75x50 wp-post-image entered lazyloaded" alt="" decoding="async" loading="lazy" data-lazy-srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-80x54.jpeg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-300x199.jpeg 300w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-274x183.jpeg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-364x245.jpeg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-130x87.jpeg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-359x240.jpeg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-85x57.jpeg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-546x365.jpeg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-266x179.jpeg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-165x109.jpeg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-347x233.jpeg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-112x75.jpeg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-179x116.jpeg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-576x392.jpeg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-170x113.jpeg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-333x227.jpeg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-81x55.jpeg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-765x510.jpeg 765w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1.jpeg 310w" data-lazy-sizes="(max-width: 75px) 100vw, 75px" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-80x54.jpeg" data-ll-status="loaded" sizes="(max-width: 75px) 100vw, 75px" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-80x54.jpeg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-300x199.jpeg 300w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-274x183.jpeg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-364x245.jpeg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-130x87.jpeg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-359x240.jpeg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-85x57.jpeg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-546x365.jpeg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-266x179.jpeg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-165x109.jpeg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-347x233.jpeg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-112x75.jpeg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-179x116.jpeg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-576x392.jpeg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-170x113.jpeg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-333x227.jpeg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-81x55.jpeg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-765x510.jpeg 765w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1.jpeg 310w"><noscript><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-80x54.jpeg" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-80x54.jpeg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-300x199.jpeg 300w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-274x183.jpeg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-364x245.jpeg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-130x87.jpeg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-359x240.jpeg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-85x57.jpeg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-546x365.jpeg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-266x179.jpeg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-165x109.jpeg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-347x233.jpeg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-112x75.jpeg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-179x116.jpeg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-576x392.jpeg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-170x113.jpeg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-333x227.jpeg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-81x55.jpeg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-765x510.jpeg 765w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1.jpeg 310w" sizes="(max-width: 75px) 100vw, 75px" /></noscript><span class="rpwwt-post-title">Qushtipa Canal, a Concrete Step Towards Self-sufficient Afghanistan</span></a><div class="rpwwt-post-date">November 23, 2022</div></li>
+</ul>
+</div>
+</div><div class="widget posts_list"><div class="widget-title"><h4>Latest News</h4></div> <ul class="post-list">
+<li class="post-53871 post type-post status-publish format-standard has-post-thumbnail category-15 category-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/arcs-distributes-food-aid-to-500-families-in-khost/">ARCS distributes food aid to 500 families in Khost</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-29T13:32:47+00:00" itemprop="dateCreated">November 29, 2022</time>
+</div>
+</li>
+<li class="post-53866 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-top-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/foreign-minister-meets-pakistani-delegation/">Foreign minister meets Pakistani delegation</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-29T12:33:13+00:00" itemprop="dateCreated">November 29, 2022</time>
+</div>
+</li>
+<li class="post-53863 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-peace-and-security">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/two-smugglers-arrested-with-drugs-in-kabul/">Two smugglers arrested with drugs in Kabul</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-29T12:18:29+00:00" itemprop="dateCreated">November 29, 2022</time>
+</div>
+</li>
+<li class="post-53856 post type-post status-publish format-standard has-post-thumbnail category-15 category-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/revenue-ghazni-transport-authority-increases-7-folds/">Revenue of Ghazni Transport Authority increases 7 folds</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-28T17:37:50+00:00" itemprop="dateCreated">November 28, 2022</time>
+</div>
+</li>
+<li class="post-53853 post type-post status-publish format-standard has-post-thumbnail category-15 category-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/853-displaced-families-receive-cash-aid-in-wardak/">853 displaced families receive cash aid in Wardak</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-28T17:26:25+00:00" itemprop="dateCreated">November 28, 2022</time>
+</div>
+</li>
+<li class="post-53850 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-top-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/meeting-of-political-commission-convened/">Meeting of Political Commission Convened</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-28T17:12:37+00:00" itemprop="dateCreated">November 28, 2022</time>
+</div>
+</li>
+<li class="post-53847 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-peace-and-security">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/2-thieves-held-in-kabul-stolen-items-recovered/">2 thieves held in Kabul, stolen items recovered</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-28T17:01:42+00:00" itemprop="dateCreated">November 28, 2022</time>
+</div>
+</li>
+<li class="post-53842 post type-post status-publish format-standard has-post-thumbnail category-15 category-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/53842-2/">Over 3000 families receive food aid in Paktia</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-28T16:55:00+00:00" itemprop="dateCreated">November 28, 2022</time>
+</div>
+</li>
+<li class="post-53837 post type-post status-publish format-standard has-post-thumbnail category-15 category-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/53837-2/">Nearly 400 police graduate from Parwan police training center</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-28T16:49:04+00:00" itemprop="dateCreated">November 28, 2022</time>
+</div>
+</li>
+<li class="post-53833 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-peace-and-security">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/scores-of-light-and-heavy-weapons-handed-over-to-relevant-commission/">Scores of light and heavy weapons handed over to relevant commission</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-27T15:30:41+00:00" itemprop="dateCreated">November 27, 2022</time>
+</div>
+</li>
+<li class="post-53830 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-top-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/political-deputy-pm-meets-eu-charge-daffaires-for-afghanistan/">Political deputy PM meets EU Chargé d’Affaires for Afghanistan</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-27T15:21:25+00:00" itemprop="dateCreated">November 27, 2022</time>
+</div>
+</li>
+<li class="post-53827 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-peace-and-security">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/4-arrested-for-plotting-terrorist-activities-in-kabul/">4 arrested for plotting terrorist activities in Kabul</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-27T08:33:50+00:00" itemprop="dateCreated">November 27, 2022</time>
+</div>
+</li>
+<li class="post-53824 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-top-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/deputy-pm-calls-for-investment-in-the-country/">Deputy PM Calls for Investment in the Country</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-27T07:42:04+00:00" itemprop="dateCreated">November 27, 2022</time>
+</div>
+</li>
+<li class="post-53821 post type-post status-publish format-standard has-post-thumbnail category-15 category-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/2700-needy-families-receive-food-aid-in-paktia/">2700 Needy families receive food aid in Paktia</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-27T07:21:55+00:00" itemprop="dateCreated">November 27, 2022</time>
+</div>
+</li>
+<li class="post-53817 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-peace-and-security">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/two-murderous-robbers-held-kabul/">Two murderous robbers held Kabul</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-26T15:25:02+00:00" itemprop="dateCreated">November 26, 2022</time>
+</div>
+</li>
+<li class="post-53810 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-top-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/economic-deputy-pm-visits-mes-aynak-mine-site/">Economic Deputy PM Visits Mes Aynak Mine Site</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-26T15:02:39+00:00" itemprop="dateCreated">November 26, 2022</time>
+</div>
+</li>
+<li class="post-53808 post type-post status-publish format-standard category-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/child-rescued-from-kidnapers-in-nangarhar/">Child rescued from kidnapers in Nangarhar</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-26T14:52:40+00:00" itemprop="dateCreated">November 26, 2022</time>
+</div>
+</li>
+<li class="post-53804 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-remarks-reactions">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/iea-reject-claims-of-providing-construction-machinery-to-qatar/">IEA reject claims of providing construction machinery to Qatar</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-26T06:41:32+00:00" itemprop="dateCreated">November 26, 2022</time>
+</div>
+</li>
+<li class="post-53801 post type-post status-publish format-standard has-post-thumbnail category-15 category-news category-remarks-reactions">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/iea-rejects-statement-of-unhcr-calls-it-disrespect-to-the-holy-religion-of-islam/">IEA Rejects Statement of OHCHR, Calls it Disrespect to the Holy Religion of Islam</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-26T06:15:54+00:00" itemprop="dateCreated">November 26, 2022</time>
+</div>
+</li>
+<li class="post-53791 post type-post status-publish format-standard has-post-thumbnail category-15 category-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/mofa-of-the-iea-congratulates-new-prime-minister-of-malaysia/">MoFA of the IEA Congratulates New Prime Minister of Malaysia</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-24T14:31:22+00:00" itemprop="dateCreated">November 24, 2022</time>
+</div>
+</li>
+<li class="post-53787 post type-post status-publish format-standard has-post-thumbnail category-15 category-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/53787-2/">424 Policemen Graduate in Wardak</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-24T10:51:23+00:00" itemprop="dateCreated">November 24, 2022</time>
+</div>
+</li>
+<li class="post-53783 post type-post status-publish format-standard has-post-thumbnail category-15 category-news">
+<h2>
+<a class="entry-title" href="https://www.alemarahenglish.af/around-500000-tons-of-goods-transferred-through-railway-last-month/">Around 500,000 tons of Goods Transferred Through Railway last Month</a>
+</h2>
+<span class="post-format-icon"></span>
+<div class="entry-meta">
+<time class="entry-date updated" datetime="2022-11-24T10:34:56+00:00" itemprop="dateCreated">November 24, 2022</time>
+</div>
+</li>
+</ul>
+</div><div class="widget recent-posts-widget-with-thumbnails">
+<div id="rpwwt-recent-posts-widget-with-thumbnails-4" class="rpwwt-widget">
+<div class="widget-title"><h4>Reconstruction and Development </h4></div>
+<ul>
+<li><a href="https://www.alemarahenglish.af/qoshtipa-canal-a-step-towards-self-sufficient-afghanistan/"><img width="75" height="50" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2075%2050'%3E%3C/svg%3E" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" data-lazy-srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-80x54.jpeg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-300x199.jpeg 300w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-274x183.jpeg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-364x245.jpeg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-130x87.jpeg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-359x240.jpeg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-85x57.jpeg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-546x365.jpeg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-266x179.jpeg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-165x109.jpeg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-347x233.jpeg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-112x75.jpeg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-179x116.jpeg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-576x392.jpeg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-170x113.jpeg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-333x227.jpeg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-81x55.jpeg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-765x510.jpeg 765w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1.jpeg 310w" data-lazy-sizes="(max-width: 75px) 100vw, 75px" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-80x54.jpeg"><noscript><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-80x54.jpeg" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-80x54.jpeg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-300x199.jpeg 300w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-274x183.jpeg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-364x245.jpeg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-130x87.jpeg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-359x240.jpeg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-85x57.jpeg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-546x365.jpeg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-266x179.jpeg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-165x109.jpeg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-347x233.jpeg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-112x75.jpeg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-179x116.jpeg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-576x392.jpeg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-170x113.jpeg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-333x227.jpeg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-81x55.jpeg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1-765x510.jpeg 765w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/images-1.jpeg 310w" sizes="(max-width: 75px) 100vw, 75px" /></noscript><span class="rpwwt-post-title">Qushtipa Canal, a Concrete Step Towards Self-sufficient Afghanistan</span></a><div class="rpwwt-post-date">November 23, 2022</div></li>
+<li><a href="https://www.alemarahenglish.af/construction-work-of-50-km-maruf-arghistan-road-kicks-off/"><img width="75" height="50" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2075%2050'%3E%3C/svg%3E" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" data-lazy-srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-765x510.jpg 765w" data-lazy-sizes="(max-width: 75px) 100vw, 75px" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-80x54.jpg"><noscript><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-80x54.jpg" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221122-WA0121-765x510.jpg 765w" sizes="(max-width: 75px) 100vw, 75px" /></noscript><span class="rpwwt-post-title">Construction work of 50-km Maruf-Arghistan road kicks off</span></a><div class="rpwwt-post-date">November 22, 2022</div></li>
+<li><a href="https://www.alemarahenglish.af/construction-of-prototype-of-green-tomb-starts-in-kabul/"><img width="75" height="50" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2075%2050'%3E%3C/svg%3E" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" data-lazy-srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-765x510.jpg 765w" data-lazy-sizes="(max-width: 75px) 100vw, 75px" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-80x54.jpg"><noscript><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-80x54.jpg" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221120-WA0069-750x375-1-765x510.jpg 765w" sizes="(max-width: 75px) 100vw, 75px" /></noscript><span class="rpwwt-post-title">Construction of Prototype of Green Tomb Starts in Kabul</span></a><div class="rpwwt-post-date">November 20, 2022</div></li>
+<li><a href="https://www.alemarahenglish.af/renovation-of-a-school-starts-in-lashkergah/"><img width="75" height="50" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2075%2050'%3E%3C/svg%3E" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" data-lazy-srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-765x510.jpg 765w" data-lazy-sizes="(max-width: 75px) 100vw, 75px" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-80x54.jpg"><noscript><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-80x54.jpg" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221119-WA0071-750x375-1-765x510.jpg 765w" sizes="(max-width: 75px) 100vw, 75px" /></noscript><span class="rpwwt-post-title">Renovation of a School Starts in Lashkergah</span></a><div class="rpwwt-post-date">November 19, 2022</div></li>
+<li><a href="https://www.alemarahenglish.af/infrastructure-projects-worth-72-million-afn-starts-in-laghman/"><img width="75" height="50" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2075%2050'%3E%3C/svg%3E" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" data-lazy-srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-765x510.jpg 765w" data-lazy-sizes="(max-width: 75px) 100vw, 75px" data-lazy-src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-80x54.jpg"><noscript><img width="75" height="50" src="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-80x54.jpg" class="attachment-75x50 size-75x50 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-80x54.jpg 80w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-274x183.jpg 274w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-364x245.jpg 364w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-130x87.jpg 130w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-359x240.jpg 359w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-85x57.jpg 85w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-546x365.jpg 546w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-266x179.jpg 266w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-165x109.jpg 165w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-347x233.jpg 347w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-112x75.jpg 112w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-179x116.jpg 179w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-576x392.jpg 576w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-170x113.jpg 170w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-333x227.jpg 333w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-81x55.jpg 81w, https://www.alemarahenglish.af/wp-content/uploads/2022/11/IMG-20221117-WA0014-750x375-1-765x510.jpg 765w" sizes="(max-width: 75px) 100vw, 75px" /></noscript><span class="rpwwt-post-title">Infrastructure Projects worth 72 million AFN starts in Laghman</span></a><div class="rpwwt-post-date">November 17, 2022</div></li>
+</ul>
+</div>
+</div><div class="widget momiazat-videos"><div class="widget-title"><h4>Video</h4></div> <div class="video-widget">
+<div class="rll-youtube-player" data-src="http://www.youtube.com/embed/O4_PsDxt89c" data-id="O4_PsDxt89c" data-query="rel=0"><div data-id="O4_PsDxt89c" data-query="rel=0" data-src="http://www.youtube.com/embed/O4_PsDxt89c"><img data-lazy-src="https://i.ytimg.com/vi/O4_PsDxt89c/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript><button class="play" aria-label="play Youtube video"></button></div></div><noscript><iframe width="100%" height="227" src="http://www.youtube.com/embed/O4_PsDxt89c?rel=0" frameborder="0" allowfullscreen></iframe></noscript>
+</div>
+</div></aside>
+</div>
+</div>
+<footer class="footer clearfix">
+<div class="inner">
+<div class="footer-widget one-full">
+<div class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_wp_text wpb_content_element"><div class="widget widget_text"> <div class="textwidget"><div class="Elite_video_player" id="1" style="direction: ltr;">
+<div id="elite_options" style="display:none;">{"rootFolder":"https:\/\/www.alemarahenglish.af\/wp-content\/plugins\/Elite-video-player\/"}</div>
+</div>
+</div>
+</div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>Twitter account of spokesperson<br>
+Zabihullah Mujahid</p>
+</div>
+</div>
+<div class="wpb_widgetised_column sidebar wpb_content_element">
+<div class="wpb_wrapper">
+<div class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="twitter-timeline twitter-timeline-rendered" style="display: flex; width: 450px; max-width: 100%; margin-top: 0px; margin-bottom: 0px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 335px; height: 500px; display: block; flex-grow: 1;" title="Twitter Timeline" src="https://syndication.twitter.com/srv/timeline-profile/screen-name/Zabehulah_M33?dnt=false&amp;embedId=twitter-widget-0&amp;frame=false&amp;hideBorder=false&amp;hideFooter=false&amp;hideHeader=false&amp;hideScrollBar=false&amp;lang=en&amp;maxHeight=500px&amp;origin=https%3A%2F%2Fwww.alemarahenglish.af%2Fforeign-minister-meets-pakistani-delegation%2F&amp;sessionId=b2affb7385d00ed4e6ccecd98567eed0db029ae6&amp;showHeader=true&amp;showReplies=false&amp;transparent=false&amp;widgetsVersion=1bfeb5c3714e8%3A1661975971032"></iframe></div><script data-minify="1" async="" src="https://www.alemarahenglish.af/wp-content/cache/min/1/widgets.js?ver=1662831057" charset="utf-8"></script>
+</div></div>
+</div>
+</div> </div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>Twitter account of spokesperson<br>
+Qari Yousuf Ahmadi</p>
+</div>
+</div>
+<div class="wpb_widgetised_column sidebar wpb_content_element">
+<div class="wpb_wrapper">
+<div class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="twitter-timeline twitter-timeline-rendered" style="display: flex; width: 450px; max-width: 100%; margin-top: 0px; margin-bottom: 0px;"><iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 335px; height: 500px; display: block; flex-grow: 1;" title="Twitter Timeline" src="https://syndication.twitter.com/srv/timeline-profile/screen-name/QyAhmadi21?dnt=false&amp;embedId=twitter-widget-1&amp;frame=false&amp;hideBorder=false&amp;hideFooter=false&amp;hideHeader=false&amp;hideScrollBar=false&amp;lang=en&amp;maxHeight=500px&amp;origin=https%3A%2F%2Fwww.alemarahenglish.af%2Fforeign-minister-meets-pakistani-delegation%2F&amp;sessionId=b2affb7385d00ed4e6ccecd98567eed0db029ae6&amp;showHeader=true&amp;showReplies=false&amp;theme=light&amp;transparent=false&amp;widgetsVersion=1bfeb5c3714e8%3A1661975971032"></iframe></div> <script data-minify="1" async="" src="https://www.alemarahenglish.af/wp-content/cache/min/1/widgets.js?ver=1662831057" charset="utf-8"></script></div></div>
+</div>
+</div> </div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>Twitter account of Political Office spokesperson Dr. Muhammad Naeem</p>
+</div>
+</div>
+<div class="wpb_widgetised_column sidebar wpb_content_element">
+<div class="wpb_wrapper">
+<div class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="twitter-timeline twitter-timeline-rendered" style="display: flex; width: 450px; max-width: 100%; margin-top: 0px; margin-bottom: 0px;"><iframe id="twitter-widget-2" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 335px; height: 500px; display: block; flex-grow: 1;" title="Twitter Timeline" src="https://syndication.twitter.com/srv/timeline-profile/screen-name/IeaOffice?dnt=false&amp;embedId=twitter-widget-2&amp;frame=false&amp;hideBorder=false&amp;hideFooter=false&amp;hideHeader=false&amp;hideScrollBar=false&amp;lang=en&amp;maxHeight=500px&amp;origin=https%3A%2F%2Fwww.alemarahenglish.af%2Fforeign-minister-meets-pakistani-delegation%2F&amp;sessionId=b2affb7385d00ed4e6ccecd98567eed0db029ae6&amp;showHeader=true&amp;showReplies=false&amp;theme=light&amp;transparent=false&amp;widgetsVersion=1bfeb5c3714e8%3A1661975971032"></iframe></div> <script data-minify="1" async="" src="https://www.alemarahenglish.af/wp-content/cache/min/1/widgets.js?ver=1662831057" charset="utf-8"></script>
+</div></div>
+</div>
+</div> </div></div></div></div></div></div> </div>
+</div>
+</footer>
+<div class="footer-bottom" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+<div class="inner">
+<div class="alignright">
+</div>
+<div class="alignleft">
+<div class="copyrights">Official website of Islamic Emirate of Afghanistan</div>
+</div>
+</div>
+</div>
+<a class="toup" href="#"><i class="enotype-icon-arrow-up6"></i></a> </div>
+</div> 
+<script type="text/html" id="wpb-modifications"></script>
+<script type="text/javascript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.alemarahenglish.af","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="text/javascript" id="Momizat-main-js-js-extra">
+/* <![CDATA[ */
+var momAjaxL = {"url":"https:\/\/www.alemarahenglish.af\/wp-admin\/admin-ajax.php","nonce":"f9470a78c1","success":"Check your email to complete subscription","error":"Already subscribed","error2":"Email invalid","nomore":"No More Posts","homeUrl":"https:\/\/www.alemarahenglish.af","viewAll":"View All Results","noResults":"Sorry, no posts matched your criteria","postid":"53866"};
+/* ]]> */
+</script>
+<script data-minify="1" type="text/javascript" src="https://www.alemarahenglish.af/wp-content/cache/min/1/wp-content/themes/multinews/js/main.js?ver=1662831057" id="Momizat-main-js-js"></script>
+<script type="text/javascript" src="https://www.alemarahenglish.af/wp-content/themes/multinews/js/plugins.min.js?ver=2.8" id="plugins-js-js"></script>
+<script data-minify="1" type="text/javascript" src="https://www.alemarahenglish.af/wp-content/cache/min/1/wp-content/themes/multinews/framework/shortcodes/editor/assets/js/inview.js?ver=1662831057" id="inview-js"></script>
+<script type="text/javascript" src="https://www.alemarahenglish.af/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.6.0" id="wpb_composer_front_js-js"></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://www.alemarahenglish.af/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.c4bdc17e77719578b594d5555bee90db.html?origin=https%3A%2F%2Fwww.alemarahenglish.af" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></body><div style="all: initial;"><div id="__hcfy__" style="all: initial;"></div></div><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

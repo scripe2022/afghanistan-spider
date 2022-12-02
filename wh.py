@@ -35,11 +35,15 @@ def main(url):
     data['type'] = "whitehouse.gov"
     data['url'] = url
     data['source'] = ''
+    data['titletrans'] = ''
     dom = soup.select('section[class="body-content"] > div[class="container"] > div[class="row"]')
     content_list = dom[0].find_all("p", attrs={'class': None})
+    result = []
     for i in range(len(content_list)):
-        content_list[i] = content_list[i].getText()
-    data['content'] = content_list
+        t = content_list[i].getText(strip=True, separator='\n').splitlines()
+        for j in t:
+            result.append(j)
+    data['content'] = result
     return data
 
 def write_db(engine, data):
@@ -50,12 +54,14 @@ def write_db(engine, data):
         Column('datetime', VARCHAR),
         Column('title', VARCHAR),
         Column('type', VARCHAR),
+        Column('titletrans', VARCHAR),
         Column('content', JSON)
     )
     json_object = {
         "url": data['url'],
         "datetime": data['datetime'],
         "title": data['title'],
+        "titletrans": data["titletrans"],
         "type": data['type'],
         "source": data['source'],
         "content": data['content'],
@@ -72,6 +78,6 @@ for i in range(len(link_list)):
     data = main(link_list[i])
     write_db(engine, data)
 
-
-# engine = init_db()
-# write_db(engine, data)
+# f_html = open("demo.html", encoding = "utf-8")
+# html_doc = f_html.read()
+# data = main(html_doc)

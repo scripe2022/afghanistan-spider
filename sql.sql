@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS `posts`(
     `url` VARCHAR(300),
     `datetime` VARCHAR(50),
     `title` VARCHAR(300),
+    `titletrans` VARCHAR(300),
     `type` VARCHAR(50),
     `content` JSON,
     PRIMARY KEY (id)
